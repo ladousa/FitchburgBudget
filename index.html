@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fitchburg Budget Explorer</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1a2744;--navy-light:#243459;--gold:#c8a84b;--gold-light:#e8c96a;--cream:#f7f4ef;--cream-dark:#ede9e1;--text:#1a2744;--text-muted:#6b7280;--white:#ffffff;--shadow:0 4px 24px rgba(26,39,68,.10);--radius:12px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--text);min-height:100vh}
+header{background:var(--navy);padding:28px 40px;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.header-seal{width:52px;height:52px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
+header h1{font-family:'DM Serif Display',serif;color:var(--white);font-size:1.55rem;line-height:1.2}
+header p{color:rgba(255,255,255,.6);font-size:.82rem;margin-top:2px}
+main{max-width:1100px;margin:0 auto;padding:40px 24px 80px}
+.lookup-card{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:36px 40px;margin-bottom:36px}
+.lookup-card h2{font-family:'DM Serif Display',serif;font-size:1.4rem;margin-bottom:6px;color:var(--navy)}
+.subtitle{color:var(--text-muted);font-size:.88rem;margin-bottom:28px;line-height:1.5}
+.input-row{display:flex;gap:12px;align-items:flex-end;flex-wrap:wrap}
+.input-group{display:flex;flex-direction:column;gap:6px;flex:1;min-width:200px}
+.input-group label{font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--text-muted)}
+.input-group input{border:1.5px solid var(--cream-dark);border-radius:8px;padding:11px 14px;font-family:'DM Sans',sans-serif;font-size:.95rem;color:var(--text);background:var(--cream);transition:border-color .2s;outline:none}
+.input-group input:focus{border-color:var(--navy);background:var(--white)}
+.input-group input::placeholder{color:#adb5bd}
+.btn-primary{background:var(--navy);color:var(--white);border:none;border-radius:8px;padding:12px 28px;font-family:'DM Sans',sans-serif;font-size:.95rem;font-weight:600;cursor:pointer;transition:background .2s,transform .1s;white-space:nowrap;flex-shrink:0}
+.btn-primary:hover{background:var(--navy-light);transform:translateY(-1px)}
+.tax-hint{margin-top:20px;background:#eff6ff;border:1.5px solid #bfdbfe;border-radius:8px;padding:14px 18px;font-size:.85rem;color:#1e40af;line-height:1.6}
+.tax-hint>strong:first-child{display:block;margin-bottom:4px}
+.tax-hint a{color:#1d4ed8;font-weight:600}
+.error-msg{background:#fef2f2;border:1.5px solid #fecaca;border-radius:8px;padding:14px 18px;color:#991b1b;font-size:.88rem;margin-top:16px}
+#results{display:none}
+.school-district-row{margin-top:16px}
+.school-district-row label.sd-label{display:block;font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px}
+.school-district-row .sd-hint{font-size:.82rem;color:var(--text-muted);margin-bottom:10px;line-height:1.5}
+.sd-checkboxes{display:flex;gap:20px;flex-wrap:wrap}
+.sd-check{display:flex;align-items:center;gap:7px;cursor:pointer;font-size:.9rem;color:var(--text);user-select:none}
+.sd-check input[type=checkbox]{width:16px;height:16px;accent-color:var(--navy);cursor:pointer;flex-shrink:0}
+.results-header{background:var(--navy);border-radius:var(--radius);padding:24px 32px;margin-bottom:28px;color:var(--white)}
+.results-header-top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;margin-bottom:16px}
+.results-header h2{font-family:'DM Serif Display',serif;font-size:1.25rem;margin-bottom:4px}
+.results-header p{font-size:.85rem;color:rgba(255,255,255,.65)}
+.tax-cell{background:rgba(255,255,255,.06);padding:14px 18px}
+.tax-cell.city{background:rgba(255,255,255,.13)}
+.tax-cell.total-cell{background:rgba(200,168,75,.18)}
+.tax-cell-label{font-size:.72rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:4px}
+.tax-cell-amount{font-family:'DM Serif Display',serif;font-size:1.5rem;color:var(--white);line-height:1}
+.tax-cell.total-cell .tax-cell-amount{color:var(--gold-light);font-size:1.7rem}
+.tax-cell-note{font-size:.7rem;color:rgba(255,255,255,.4);margin-top:3px}
+.tax-cell.hidden-cell{display:none}
+.tax-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:rgba(255,255,255,.12);border-radius:10px;overflow:hidden}
+.view-toggle{display:flex;background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;margin-bottom:24px}
+.view-tab{flex:1;padding:14px 20px;font-family:'DM Sans',sans-serif;font-size:.9rem;font-weight:600;border:none;background:none;cursor:pointer;color:var(--text-muted);transition:all .2s;border-bottom:3px solid transparent;text-align:center}
+.view-tab:hover{color:var(--navy);background:#f8f7f5}
+.view-tab.active{color:var(--navy);border-bottom-color:var(--gold);background:var(--white)}
+.view-tab .tab-icon{display:block;font-size:1.1rem;margin-bottom:3px}
+.view-tab .tab-label{display:block;font-size:.82rem}
+.view-tab .tab-desc{display:block;font-size:.73rem;font-weight:400;color:var(--text-muted);margin-top:1px}
+.results-header{background:var(--navy);border-radius:var(--radius);padding:28px 36px;margin-bottom:28px;color:var(--white);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.results-header h2{font-family:'DM Serif Display',serif;font-size:1.25rem;margin-bottom:4px}
+.results-header p{font-size:.85rem;color:rgba(255,255,255,.65)}
+.results-total{text-align:right}
+.results-total .amount{font-family:'DM Serif Display',serif;font-size:2.2rem;color:var(--gold-light);line-height:1}
+.results-total .label{font-size:.78rem;color:rgba(255,255,255,.55);margin-top:4px}
+.charts-row{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:28px}
+@media(max-width:720px){.charts-row{grid-template-columns:1fr}.tax-grid{grid-template-columns:repeat(3,1fr)}}
+.chart-card{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px 28px}
+.chart-card h3{font-family:'DM Serif Display',serif;font-size:1rem;color:var(--navy);margin-bottom:18px}
+#barCard{display:flex;flex-direction:column}
+#barScroll{flex:1;min-height:0}
+#barChart{width:100%!important}
+.table-card{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;margin-bottom:28px}
+.table-card-header{padding:20px 28px;border-bottom:1.5px solid var(--cream-dark);display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.table-card-header h3{font-family:'DM Serif Display',serif;font-size:1.05rem;color:var(--navy)}
+.table-card-header p{font-size:.8rem;color:var(--text-muted);margin-top:2px}
+.header-btns{display:flex;gap:8px;flex-shrink:0}
+.toggle-btn{background:none;border:1.5px solid var(--cream-dark);border-radius:6px;padding:7px 16px;font-family:'DM Sans',sans-serif;font-size:.82rem;font-weight:600;color:var(--text-muted);cursor:pointer;transition:all .2s}
+.toggle-btn:hover{border-color:var(--navy);color:var(--navy);background:#f0f4ff}
+.category-row{border-bottom:1.5px solid var(--cream-dark)}
+.category-row:last-child{border-bottom:none}
+.category-header{display:grid;grid-template-columns:28px 1fr auto auto auto;align-items:center;gap:12px;padding:16px 28px;cursor:pointer;transition:background .15s;user-select:none}
+.category-header:hover{background:#f8f7f5}
+.no-drill{cursor:default !important}
+.no-drill:hover{background:inherit !important}
+.no-drill .cat-chevron{visibility:hidden}
+.cat-chevron{font-size:.72rem;color:var(--text-muted);transition:transform .25s;justify-self:center}
+.category-row.open>.category-header .cat-chevron{transform:rotate(90deg)}
+.cat-name{font-weight:600;font-size:.95rem;display:flex;align-items:center;gap:10px}
+.cat-badge{display:inline-block;width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.cat-pct{font-size:.82rem;color:var(--text-muted);min-width:52px;text-align:right}
+.cat-bar-wrap{width:110px}
+.cat-bar-bg{height:6px;background:var(--cream-dark);border-radius:3px;overflow:hidden}
+.cat-bar-fill{height:100%;border-radius:3px}
+.cat-amount{font-weight:600;font-size:.95rem;min-width:90px;text-align:right}
+.dept-rows{display:none}
+.category-row.open>.dept-rows{display:block}
+.dept-section{border-top:1px solid var(--cream-dark)}
+.dept-header{display:grid;grid-template-columns:28px 1fr auto auto auto;align-items:center;gap:12px;padding:11px 28px 11px 52px;background:#fbfaf8;cursor:pointer;transition:background .15s;user-select:none}
+.dept-header:hover{background:#f4f2ee}
+.dept-chevron{font-size:.68rem;color:#aaa;transition:transform .2s;justify-self:center}
+.dept-section.open>.dept-header .dept-chevron{transform:rotate(90deg)}
+.dept-name{font-size:.88rem;font-weight:500}
+.dept-pct{font-size:.82rem;color:var(--text-muted);min-width:52px;text-align:right}
+.dept-bar-wrap{width:110px}
+.dept-amount{font-size:.88rem;font-weight:600;text-align:right;min-width:90px}
+.dept-rows>.exp-section{border-top:1px solid var(--cream-dark)}
+.dept-rows>.exp-section .exp-header{padding-left:52px}
+.exp-rows{display:none}
+.dept-section.open>.exp-rows{display:block}
+.exp-section{border-top:1px solid #eeeae3}
+.exp-header{display:grid;grid-template-columns:1fr auto;align-items:center;gap:10px;padding:9px 28px 9px 76px;background:#fdfcfa}
+.exp-name{font-size:.83rem;font-weight:500;color:#4b5563}
+.exp-amount{font-size:.83rem;font-weight:600;color:var(--text);text-align:right}
+.exp-flat-row{border-bottom:1px solid var(--cream-dark);display:grid;grid-template-columns:28px 1fr auto auto auto;align-items:center;gap:12px;padding:14px 28px;cursor:pointer;transition:background .15s;user-select:none}
+.exp-flat-row:last-child{border-bottom:none}
+.exp-flat-row:hover{background:#f8f7f5}
+.exp-flat-row .cat-chevron{font-size:.72rem;color:var(--text-muted);transition:transform .25s;justify-self:center}
+.exp-flat-row.open .cat-chevron{transform:rotate(90deg)}
+.exp-flat-row.no-expand{cursor:default}
+.exp-flat-row.no-expand:hover{background:inherit}
+.exp-flat-row.no-expand .cat-chevron{visibility:hidden}
+.exp-sub-rows{display:none;border-bottom:1px solid var(--cream-dark)}
+.exp-flat-row.open+.exp-sub-rows{display:block}
+.exp-sub-row{display:grid;grid-template-columns:1fr auto auto auto;align-items:center;gap:12px;padding:10px 28px 10px 52px;background:#fbfaf8;border-top:1px solid var(--cream-dark);font-size:.87rem}
+.exp-sub-name{font-weight:500;display:flex;align-items:center;gap:8px}
+.exp-sub-badge{display:inline-block;width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.exp-sub-pct{font-size:.8rem;color:var(--text-muted);min-width:48px;text-align:right}
+.exp-sub-bar{width:90px}
+.exp-sub-amt{font-weight:600;min-width:72px;text-align:right}
+.footnote{font-size:.78rem;color:var(--text-muted);text-align:center;line-height:1.6;padding:0 20px}
+.footnote a{color:var(--navy)}
+@media(max-width:600px){header{padding:20px}main{padding:24px 16px 60px}.lookup-card{padding:24px 20px}.results-header{padding:20px 24px}.cat-bar-wrap{display:none}.dept-bar-wrap{display:none}.category-header{grid-template-columns:24px 1fr auto auto}.dept-header{grid-template-columns:24px 1fr auto}.exp-flat-row{grid-template-columns:14px 1fr auto auto}}
+.info-wrap{position:relative;display:inline-flex;align-items:center;margin-left:6px}
+.info-icon{display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;border-radius:50%;background:#d1d5db;color:#374151;font-size:10px;font-weight:700;cursor:default;flex-shrink:0;line-height:1;font-style:normal;user-select:none}
+.info-icon:hover{background:#9ca3af}
+.info-tip{visibility:hidden;opacity:0;position:absolute;left:0;transform:none;bottom:calc(100% + 8px);width:300px;background:var(--navy);color:#fff;font-size:.78rem;font-weight:400;line-height:1.55;padding:12px 14px;border-radius:8px;box-shadow:0 6px 24px rgba(0,0,0,.22);pointer-events:none;transition:opacity .18s,visibility .18s;z-index:100;white-space:normal;text-align:left}
+.info-tip::after{content:'';position:absolute;top:100%;left:6px;transform:none;border:6px solid transparent;border-top-color:var(--navy)}
+.info-wrap:hover .info-tip{visibility:visible;opacity:1}
+.tip-below .info-tip{bottom:auto;top:calc(100% + 8px)}
+.tip-below .info-tip::after{top:auto;bottom:100%;border-top-color:transparent;border-bottom-color:var(--navy)}
+@media(max-width:600px){.info-tip{width:220px;left:auto;right:0;transform:none}.info-tip::after{left:auto;right:12px;transform:none}}
+.btn-faq{background:rgba(255,255,255,.15);color:var(--white);border:1.5px solid rgba(255,255,255,.25);border-radius:8px;padding:10px 18px;font-family:'DM Sans',sans-serif;font-size:.9rem;font-weight:600;cursor:pointer;transition:all .2s;white-space:nowrap}
+.btn-faq:hover{background:rgba(255,255,255,.25);border-color:rgba(255,255,255,.4)}
+.faq-section{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);padding:36px 40px;margin-bottom:36px;display:none}
+.faq-section.open{display:block}
+.faq-section h2{font-family:'DM Serif Display',serif;font-size:1.4rem;margin-bottom:6px;color:var(--navy)}
+.faq-subtitle{color:var(--text-muted);font-size:.88rem;margin-bottom:28px}
+.faq-item{border-bottom:1.5px solid var(--cream-dark);padding:20px 0}
+.faq-item:last-child{border-bottom:none}
+.faq-question{display:flex;align-items:flex-start;gap:12px;cursor:pointer;user-select:none;transition:all .2s}
+.faq-question:hover{color:var(--navy)}
+.faq-toggle{color:var(--navy);font-size:1.1rem;flex-shrink:0;transition:transform .25s;margin-top:2px}
+.faq-item.open .faq-toggle{transform:rotate(90deg)}
+.faq-text{flex:1}
+.faq-q{font-weight:600;font-size:1rem;color:var(--navy);margin-bottom:2px}
+.faq-a{display:none;color:var(--text);font-size:.95rem;line-height:1.6;margin-top:12px}
+.faq-item.open .faq-a{display:block}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-seal">&#127963;</div>
+  <div>
+    <h1>Fitchburg Budget Explorer</h1>
+    <p>2026 Adopted Budget &middot; City of Fitchburg, Wisconsin</p>
+  </div>
+  <button class="btn-faq" id="faqToggle">❓ Help & FAQ</button>
+</header>
+<main>
+  <div class="faq-section" id="faqSection">
+    <h2>Frequently Asked Questions</h2>
+    <p class="faq-subtitle">Learn more about how the Budget Explorer works</p>
+    
+    <div class="faq-item">
+      <div class="faq-question">
+        <span class="faq-toggle">▶</span>
+        <div class="faq-text">
+          <div class="faq-q">What does this calculator show?</div>
+          <div class="faq-a">The Fitchburg Budget Explorer estimates how your City of Fitchburg property tax dollars are allocated across City services and departments. Enter your property's assessed value, and the calculator estimates the portion of your City property tax bill that supports areas such as police, fire, parks, transportation, public works, and other City services. The goal is to make the City's budget easier to understand by translating budget numbers into something more familiar: how much of your property tax dollars goes toward each area of City government.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span class="faq-toggle">▶</span>
+        <div class="faq-text">
+          <div class="faq-q">Is this the entire City of Fitchburg budget?</div>
+          <div class="faq-a">No. The City receives money from many different sources, including property taxes, state and federal grants, user fees, charges for services, intergovernmental revenues, and other sources. The Budget Explorer focuses specifically on the portion of City spending supported by the property tax levy. It is therefore not intended to show every dollar the City spends or every source of City revenue. For example, if the City spends $3 million on transportation but $1.5 million is funded by a state grant and $1.5 million is funded by the property tax levy, the Budget Explorer attributes $1.5 million to transportation.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span class="faq-toggle">▶</span>
+        <div class="faq-text">
+          <div class="faq-q">Why don't some City expenses appear here?</div>
+          <div class="faq-a">Some City expenses are funded entirely or primarily through sources other than the property tax levy. The Budget Explorer is designed to answer the question: "How are my City property tax dollars being used?" It therefore does not attribute spending to residents when that spending is funded by grants, fees, or other non-levy revenues. This means the amounts shown for individual departments or services may be lower than the total amount that department or service actually spends.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span class="faq-toggle">▶</span>
+        <div class="faq-text">
+          <div class="faq-q">Why are grants and other revenue sources excluded?</div>
+          <div class="faq-a">Because grants and other revenues aren't paid through your property tax levy. For example, suppose the City receives a $1 million state grant to fund a particular project. That $1 million is part of the City's overall budget and may support an important City service, but it isn't money collected through Fitchburg property taxes. The Budget Explorer is intended to show where the property tax levy goes, rather than where every dollar in the City's overall budget goes. In the future, the Explorer may incorporate additional information about other revenue sources to provide a more complete picture of City finances.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span class="faq-toggle">▶</span>
+        <div class="faq-text">
+          <div class="faq-q">Does this include my entire property tax bill?</div>
+          <div class="faq-a">No. The Budget Explorer calculates the City of Fitchburg portion of your property tax bill. Your total property tax bill also supports other taxing jurisdictions, including Dane County, your local school district, and Madison Area Technical College (MATC). The Explorer only calculates the portion attributable to the City of Fitchburg.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span class="faq-toggle">▶</span>
+        <div class="faq-text">
+          <div class="faq-q">How are the numbers calculated?</div>
+          <div class="faq-a">The calculation starts with the City's adopted budget and identifies expenditures supported by the property tax levy. Those levy-supported expenditures are then organized by department or service area. The percentage of the total levy allocated to each area is applied to the estimated City property tax amount for your property. For example, if 10% of the City's property tax levy supports the Fire Department, the Explorer estimates that approximately 10% of your City property tax payment supports the Fire Department. The result is an estimate intended to make the budget easier to understand. It should not be interpreted as a literal accounting of individual tax dollars or as a statement that a specific portion of your payment is placed into a particular department's account.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span class="faq-toggle">▶</span>
+        <div class="faq-text">
+          <div class="faq-q">Where does the data come from?</div>
+          <div class="faq-a">The Budget Explorer uses publicly available information from the City of Fitchburg's adopted budget and property tax information. The underlying budget information is public and can be found through the City's budget and financial documents. The Budget Explorer is an independently created project and is not an official City of Fitchburg website or product. It is intended to make publicly available financial information easier for residents to understand and explore.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span class="faq-toggle">▶</span>
+        <div class="faq-text">
+          <div class="faq-q">How often will this be updated?</div>
+          <div class="faq-a">The Budget Explorer will be updated when a new City budget is adopted. The current version is based on the 2026 adopted City budget. Following adoption of the 2027 budget, the Explorer will be updated to reflect the new budget. Additional updates may be made when necessary to correct errors or improve the methodology. Future versions may also include additional information, such as how other revenue sources contribute to City services or how the budget changes from one year to the next.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="lookup-card">
+    <h2>Where does your property tax go?</h2>
+    <p class="subtitle">Enter your assessed property value to see exactly how your City of Fitchburg property tax is allocated across every city service, department, and expense type.</p>
+    <div class="input-row">
+      <div class="input-group">
+        <label>Assessed Property Value ($)</label>
+        <input type="text" id="assessedValue" placeholder="e.g. 450,000" inputmode="numeric">
+      </div>
+      <button class="btn-primary" onclick="calculate()">Show My Breakdown</button>
+    </div>
+    <div class="tax-hint">
+      <strong>&#128203; How to find your assessed value</strong>
+      Look up your property on <a href="https://accessdane.danecounty.gov/Parcel" target="_blank">AccessDane</a>. Your assessed value appears on your property record and may differ from your home's market value. The total city mill rate is <strong>$5.4236 per $1,000</strong> of assessed value.
+    </div>
+    <div class="school-district-row">
+      <label class="sd-label">School District (optional)</label>
+      <p class="sd-hint">Check your school district to include school taxes in your total property tax estimate.</p>
+      <div class="sd-checkboxes">
+        <label class="sd-check"><input type="checkbox" id="sdMadison" onchange="onSchoolCheck('sdMadison')"> Madison School District</label>
+        <label class="sd-check"><input type="checkbox" id="sdVerona" onchange="onSchoolCheck('sdVerona')"> Verona School District</label>
+        <label class="sd-check"><input type="checkbox" id="sdOregon" onchange="onSchoolCheck('sdOregon')"> Oregon School District</label>
+      </div>
+    </div>
+    <div id="errorMsg" class="error-msg" style="display:none"></div>
+  </div>
+
+  <div id="results">
+    <div class="results-header">
+      <div class="results-header-top">
+        <div>
+          <h2>Your 2026 Property Tax Breakdown</h2>
+          <p id="resultsSubtitle">Based on assessed value of $&mdash;</p>
+        </div>
+      </div>
+      <div class="tax-grid">
+        <div class="tax-cell city">
+          <div class="tax-cell-label">City of Fitchburg</div>
+          <div class="tax-cell-amount" id="totalTax">$&mdash;</div>
+          <div class="tax-cell-note">Mill rate: $5.4236</div>
+        </div>
+        <div class="tax-cell" id="schoolCell">
+          <div class="tax-cell-label" id="schoolLabel">School District</div>
+          <div class="tax-cell-amount" id="schoolTax">$&mdash;</div>
+          <div class="tax-cell-note" id="schoolNote">Select district above</div>
+        </div>
+        <div class="tax-cell">
+          <div class="tax-cell-label">Dane County</div>
+          <div class="tax-cell-amount" id="countyTax">$&mdash;</div>
+          <div class="tax-cell-note">Mill rate: $2.6061</div>
+        </div>
+        <div class="tax-cell">
+          <div class="tax-cell-label">MATC</div>
+          <div class="tax-cell-amount" id="matcTax">$&mdash;</div>
+          <div class="tax-cell-note">Mill rate: $0.6244</div>
+        </div>
+        <div class="tax-cell total-cell" id="totalCell">
+          <div class="tax-cell-label">Est. Total</div>
+          <div class="tax-cell-amount" id="grandTotal">$&mdash;</div>
+          <div class="tax-cell-note" id="totalNote">City + County + MATC</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="view-toggle">
+      <button class="view-tab active" id="tabDept" onclick="switchView('dept')">
+        <span class="tab-icon">&#127963;</span>
+        <span class="tab-label">By Department</span>
+        <span class="tab-desc">Police, Fire, Library, Parks&hellip;</span>
+      </button>
+      <button class="view-tab" id="tabExp" onclick="switchView('exp')">
+        <span class="tab-icon">&#128184;</span>
+        <span class="tab-label">By Expense Type</span>
+        <span class="tab-desc">Salaries, IT, Utilities, Supplies&hellip;</span>
+      </button>
+    </div>
+
+    <div class="charts-row">
+      <div class="chart-card" id="barCard"><h3>Spending by Category</h3><div id="barScroll"><canvas id="barChart"></canvas></div></div>
+      <div class="chart-card"><h3>Share of Budget</h3><canvas id="pieChart"></canvas></div>
+    </div>
+
+    <div id="deptView">
+      <div class="table-card">
+        <div class="table-card-header">
+          <div><h3>Breakdown by Department</h3><p>Click any category to expand departments and expense types</p></div>
+          <div class="header-btns">
+            <button class="toggle-btn" onclick="expandAll()">Expand All</button>
+            <button class="toggle-btn" onclick="collapseAll()">Collapse All</button>
+          </div>
+        </div>
+        <div id="deptTableBody"></div>
+      </div>
+    </div>
+
+    <div id="expView" style="display:none">
+      <div class="table-card">
+        <div class="table-card-header">
+          <div><h3>Breakdown by Expense Type</h3><p>How your tax dollars are spent across all departments</p></div>
+        </div>
+        <div id="expTableBody"></div>
+      </div>
+    </div>
+
+    <p class="footnote">
+      About the numbers: This tool shows how the City of Fitchburg's property tax levy is allocated across city services and departments. It does not include county, school district, or technical college portions of your property tax bill. It does not represent the City's entire budget. Many City programs are funded through grants, fees, state and federal funding, and other revenue sources that are not included in this calculation.<br><br>
+      Total city mill rate: $5.4236 per $1,000 of assessed value (2025 tax year). Budget figures from the 2026 Adopted Budget.<br><br>
+      This is an independently created project using publicly available City budget and property tax information. It is not an official City of Fitchburg website or product. Source data: <a href="https://www.fitchburgwi.gov" target="_blank">fitchburgwi.gov</a> &middot; <a href="https://accessdane.danecounty.gov" target="_blank">AccessDane</a>
+    </p>
+  </div>
+</main>
+<script>
+// FAQ Toggle
+document.addEventListener('DOMContentLoaded', function() {
+  const faqToggle = document.getElementById('faqToggle');
+  if (faqToggle) {
+    faqToggle.addEventListener('click', function() {
+      const faqSection = document.getElementById('faqSection');
+      faqSection.classList.toggle('open');
+    });
+  }
+
+  // FAQ Item Toggles
+  document.querySelectorAll('.faq-question').forEach(question => {
+    question.addEventListener('click', function() {
+      this.parentElement.classList.toggle('open');
+    });
+  });
+});
+
+// Budget Calculator Code
+const MILL={general:3.4101/1000,transit:0.1479/1000,library:0.3832/1000,debt:0.8473/1000,capital:0.2981/1000,tid:0.3370/1000};
+const TOTAL_MILL=Object.values(MILL).reduce((a,b)=>a+b,0);
+
+// Capital Projects is now fully distributed into departments -- no single-line entry
+const SINGLE={
+  'Debt Service':{fund:'debt'},
+  'TID':{fund:'tid'}
+};
+
+const TOOLTIPS={
+  'TID':'Tax Increment Districts (TIDs) are used to fund development and infrastructure in designated areas. As property values grow in these districts, the additional taxes ("increment") are set aside to pay for those improvements.\n\nThis means a portion of your property tax bill is dedicated to these projects rather than general city services. As TIDs close, this value returns to the general tax base and can help fund services or reduce tax pressure.',
+  'Debt Service':'Debt service is the annual cost of repaying city borrowing used for major, long-lasting projects like roads, public safety facilities, and equipment. Spreading these costs over time helps avoid large one-time tax increases.'
+};
+
+const META={
+  'Police':{color:'#2563a8'},'Fire/EMS':{color:'#c0392b'},'General Government':{color:'#1a6b5a'},
+  'Public Works':{color:'#7c4dff'},'Parks & Recreation':{color:'#2e7d32'},'Buildings & Grounds':{color:'#b45309'},
+  'Community':{color:'#0891b2'},'Planning':{color:'#7b3f9e'},'Library':{color:'#0e7490'},
+  'Transit':{color:'#d97706'},'Debt Service':{color:'#6b7280'},'TID':{color:'#92400e'}
+};
+const ORDER=['Police','Fire/EMS','General Government','Public Works','Parks & Recreation','Buildings & Grounds','Community','Planning','Library','Transit','Debt Service','TID'];
+
+const EXP_COLORS=['#1d4ed8','#7c3aed','#0891b2','#059669','#b45309','#be185d','#dc2626','#2563a8',
+  '#0e7490','#065f46','#92400e','#6b21a8','#1e40af','#166534','#9f1239','#374151',
+  '#4338ca','#0369a1','#047857','#b91c1c','#6d28d9','#0c4a6e','#134e4a','#4a1942'];
+
+const EXP_WEIGHTS={
+  "Salary & Benefits":0.002790325200514344,
+  "Equipment: Materials, Supplies, Replacement Funds":0.0002136449875289804,
+  "EMS":0.00018012413898385062,
+  "IT Expenses":0.00017199875369844448,
+  "Software and Contracted Services":0.0001599485163310184,
+  "Metro Transit Services":0.00014790000000000002,
+  "Road/Path Maintenance":0.00012971297210725424,
+  "Insurance Expenses":7.621577207273524e-05,
+  "Vehicle Expense, Gas, Fuel":6.877597338274407e-05,
+  "Utilities":6.440801376422107e-05,
+  "Building Expenses":5.108420948622783e-05,
+  "Street Light/Traffic Signal Service":3.74281282512205e-05,
+  "Police/Fire Systems":3.630966837185386e-05,
+  "Program Expenses":3.4559667931951006e-05,
+  "Training, Travel, Tuition":2.55891162699503e-05,
+  "General Office":2.4521697410610705e-05,
+  "Other Expenses":8.360556097768238e-06,
+  "Grants":6.904749867721497e-06,
+  "Golf Course Maintenance":6.137555437974664e-06,
+  "Election Costs":5.350322491129019e-06
+};
+
+// Per expense-type category: breakdown by top-level dept category (mill weights per $1 assessed)
+const EXP_DEPT_WEIGHTS={
+  "Building Expenses":{"Buildings & Grounds":1.1207734582507323e-05,"Fire/EMS":6.733873537818833e-06,"Library":1.1213019343495385e-06},
+  "EMS":{"Fire/EMS":0.00018012413898385062},
+  "Election Costs":{"General Government":5.268981744296999e-06,"Library":8.134074683201989e-08},
+  "Equipment: Materials, Supplies, Replacement Funds":{"Parks & Recreation":8.24012683185768e-05,"Public Works":5.407938355908279e-05,"Fire/EMS":1.8400150001340904e-05,"Police":1.3477962142588113e-05,"Library":1.0411615594498546e-05,"General Government":7.1684088254209855e-06,"Community":5.543474391672075e-06,"Buildings & Grounds":4.219569363607581e-06,"Planning":1.9179860743670823e-07},
+  "General Office":{"General Government":1.0222174441984135e-05,"Fire/EMS":3.852960025392845e-06,"Police":3.3975753317359745e-06,"Library":2.4808927783766066e-06,"Public Works":1.5464447719611162e-06,"Planning":1.1376397401103037e-06,"Parks & Recreation":1.1261318236641012e-06,"Community":4.18120964212024e-07,"Buildings & Grounds":3.397575331735974e-07},
+  "Golf Course Maintenance":{"Parks & Recreation":6.137555437974664e-06},
+  "Grants":{"Community":6.904749867721497e-06},
+  "IT Expenses":{"Police":5.3425228103484456e-05,"Fire/EMS":2.9093108768042398e-05,"General Government":2.464338107551077e-05,"Library":1.8033243572658813e-05,"Public Works":1.6995000606956094e-05,"Parks & Recreation":1.0510563687531611e-05,"Buildings & Grounds":6.666919594499978e-06,"Planning":6.554032414122944e-06,"Community":6.077275875637412e-06},
+  "Insurance Expenses":{"Police":2.5760416165222157e-05,"Fire/EMS":1.751647362077544e-05,"Public Works":8.654391564361273e-06,"Parks & Recreation":5.346687580109928e-06,"Library":5.3424602519270666e-06,"General Government":4.667501311375482e-06,"Buildings & Grounds":4.322044619580908e-06,"Community":3.2188190296049623e-06,"Planning":1.3869779297780246e-06},
+  "Metro Transit Services":{"Transit":0.00014790000000000002},
+  "Other Expenses":{"General Government":4.274368965732355e-06,"Police":3.4620196638347085e-06,"Parks & Recreation":6.241674682011734e-07},
+  "Police/Fire Systems":{"Police":2.0253384949295145e-05,"Fire/EMS":1.6056283422558717e-05},
+  "Program Expenses":{"Library":3.0340098568343423e-05,"Parks & Recreation":3.2879761274864273e-06,"Community":9.315932361211543e-07},
+  "Road/Path Maintenance":{"Public Works":0.0001107859114968011,"Parks & Recreation":1.892706061045314e-05},
+  "Salary & Benefits":{"Police":0.0010444907188233877,"Fire/EMS":0.000410777269531283,"General Government":0.0004090373821638215,"Library":0.00028091157063633,"Public Works":0.00017919217816631254,"Parks & Recreation":0.00015132943006517554,"Community":0.00011498819712249783,"Planning":0.00010080595049340212,"Buildings & Grounds":9.879250351213368e-05},
+  "Software and Contracted Services":{"General Government":6.396154760401471e-05,"Parks & Recreation":2.8457433383395027e-05,"Library":2.2712776737904914e-05,"Police":1.3930058860117495e-05,"Buildings & Grounds":9.777893007123385e-06,"Fire/EMS":8.90548334129699e-06,"Community":5.9813765719190585e-06,"Public Works":4.858532724382444e-06,"Planning":1.3634141008643716e-06},
+  "Street Light/Traffic Signal Service":{"Public Works":3.74281282512205e-05},
+  "Training, Travel, Tuition":{"Police":7.489461622392833e-06,"General Government":6.00768038093895e-06,"Fire/EMS":5.063483236329097e-06,"Public Works":1.995801509384261e-06,"Planning":1.4373935637328163e-06,"Parks & Recreation":1.180931425788875e-06,"Buildings & Grounds":1.0959920424954756e-06,"Library":6.848890883256074e-07,"Community":6.334834005623849e-07},
+  "Utilities":{"Buildings & Grounds":1.867734839218665e-05,"Library":1.2005894232406135e-05,"Police":1.1858633899801047e-05,"Fire/EMS":8.101025182105308e-06,"Community":6.942561593187592e-06,"Parks & Recreation":6.79515066347195e-06,"Public Works":2.7399801062386888e-08},
+  "Vehicle Expense, Gas, Fuel":{"Fire/EMS":2.1227300176865056e-05,"Police":2.0604650398914943e-05,"Public Works":1.3787579894593084e-05,"Parks & Recreation":4.715505762836784e-06,"Buildings & Grounds":2.3903158570859167e-06,"General Government":2.007775753956011e-06,"Community":4.855871528072976e-07,"Library":1.9521779239684773e-07}
+};
+
+let budgetData=null,pieChart=null,barChart=null,currentView='dept';
+let lastAssessed=null,lastCityTax=null,lastCatTax=null;
+
+const SCHOOL_MILLS={'sdMadison':{rate:8.8536,name:'Madison School District'},'sdVerona':{rate:9.4142,name:'Verona School District'},'sdOregon':{rate:7.5785,name:'Oregon School District'}};
+const COUNTY_MILL=2.6061/1000;
+const MATC_MILL=0.6244/1000;
+
+Papa.parse('budget_2026.csv',{download:true,header:true,dynamicTyping:true,complete:r=>{budgetData=r.data.filter(row=>row.category&&row.amount>0);}});
+
+const fmt=n=>'$'+Math.round(n).toLocaleString('en-US');
+const clean=s=>parseInt(String(s).replace(/[^0-9]/g,''));
+const infoIcon=(cat,below=false)=>TOOLTIPS[cat]?`<span class="info-wrap${below?' tip-below':''}"><i class="info-icon">i</i><span class="info-tip">${TOOLTIPS[cat].replace(/\n\n/g,'<br><br>')}</span></span>`:'';
+
+function switchView(v){
+  currentView=v;
+  document.getElementById('tabDept').classList.toggle('active',v==='dept');
+  document.getElementById('tabExp').classList.toggle('active',v==='exp');
+  document.getElementById('deptView').style.display=v==='dept'?'block':'none';
+  document.getElementById('expView').style.display=v==='exp'?'block':'none';
+  if(lastCityTax!==null){
+    if(v==='dept') renderCharts(lastCatTax,lastCityTax,ORDER,c=>META[c]?.color||'#888');
+    else renderExpCharts(lastAssessed,lastCityTax);
+  }
+}
+
+function onSchoolCheck(checkedId){
+  // Uncheck the others -- a property can only be in one school district
+  for(const id of Object.keys(SCHOOL_MILLS)){
+    if(id!==checkedId) document.getElementById(id).checked=false;
+  }
+  if(lastAssessed) calculate();
+}
+
+function calculate(){
+  const assessed=clean(document.getElementById('assessedValue').value);
+  const err=document.getElementById('errorMsg');
+  if(!assessed||assessed<1000){err.style.display='block';err.textContent='Please enter a valid assessed property value.';return;}
+  err.style.display='none';
+  if(!budgetData){err.style.display='block';err.textContent='Budget data is still loading -- please try again in a moment.';return;}
+
+  const fundTax={};
+  for(const[k,r] of Object.entries(MILL)) fundTax[k]=assessed*r;
+  const cityTax=assessed*TOTAL_MILL;
+
+  // First pass: compute fund budget totals
+  const fbt={};
+  for(const row of budgetData){
+    if(!fbt[row.fund_key]) fbt[row.fund_key]=0;
+    fbt[row.fund_key]+=row.amount;
+  }
+  // Second pass: compute each row's resident tax contribution, build tree with rowTax attached
+  const tree={};
+  const catTax={};
+  for(const row of budgetData){
+    const rowTax=(fbt[row.fund_key]>0?row.amount/fbt[row.fund_key]:0)*fundTax[row.fund_key];
+    catTax[row.category]=(catTax[row.category]||0)+rowTax;
+    if(!tree[row.category]) tree[row.category]={};
+    const deptName=(row.category==='Public Works'&&row.department==='Public Safety')?'Public Works':row.department;
+    if(!tree[row.category][deptName]) tree[row.category][deptName]={};
+    const ec=row.expense_category||'Other';
+    if(!tree[row.category][deptName][ec]) tree[row.category][deptName][ec]=[];
+    tree[row.category][deptName][ec].push({...row, rowTax});
+  }
+  catTax['Debt Service']=fundTax['debt'];
+  catTax['TID']=fundTax['tid'];
+
+  lastAssessed=assessed; lastCityTax=cityTax; lastCatTax=catTax;
+
+  // -- Other jurisdictions --
+  const countyTax=assessed*COUNTY_MILL;
+  const matcTax=assessed*MATC_MILL;
+
+  // Which school district is checked?
+  let schoolTax=0, schoolName='', schoolRate=0;
+  for(const[id,info] of Object.entries(SCHOOL_MILLS)){
+    if(document.getElementById(id)?.checked){
+      schoolTax=assessed*(info.rate/1000);
+      schoolName=info.name;
+      schoolRate=info.rate;
+      break;
+    }
+  }
+
+  const grandTotal=cityTax+countyTax+matcTax+schoolTax;
+
+  // Update header cells
+  document.getElementById('totalTax').textContent=fmt(cityTax);
+  document.getElementById('countyTax').textContent=fmt(countyTax);
+  document.getElementById('matcTax').textContent=fmt(matcTax);
+
+  const schoolCell=document.getElementById('schoolCell');
+  const schoolTaxEl=document.getElementById('schoolTax');
+  const schoolLabelEl=document.getElementById('schoolLabel');
+  const schoolNoteEl=document.getElementById('schoolNote');
+  if(schoolTax>0){
+    schoolCell.style.display='';
+    schoolLabelEl.textContent=schoolName;
+    schoolTaxEl.textContent=fmt(schoolTax);
+    schoolNoteEl.textContent='Mill rate: $'+schoolRate.toFixed(4);
+  } else {
+    schoolCell.style.display='';
+    schoolLabelEl.textContent='School District';
+    schoolTaxEl.textContent='--';
+    schoolNoteEl.textContent='Select district above';
+  }
+
+  document.getElementById('grandTotal').textContent=schoolTax>0?fmt(cityTax+countyTax+matcTax+schoolTax):'--';
+  document.getElementById('totalNote').textContent=schoolTax>0?'City + County + MATC + School':'Select a school district above to display total';
+
+  document.getElementById('resultsSubtitle').textContent='Based on assessed value of '+fmt(assessed);
+  document.getElementById('results').style.display='block';
+  document.getElementById('results').scrollIntoView({behavior:'smooth',block:'start'});
+
+  renderDeptTable(tree,catTax,cityTax);
+  renderExpTable(assessed,cityTax);
+  if(currentView==='dept') renderCharts(catTax,cityTax,ORDER,c=>META[c]?.color||'#888');
+  else renderExpCharts(assessed,cityTax);
+}
+
+function renderCharts(taxMap,cityTax,orderedKeys,colorFn){
+  const ord=orderedKeys.filter(c=>taxMap[c]).sort((a,b)=>taxMap[b]-taxMap[a]);
+  const taxAmts=ord.map(c=>taxMap[c]);
+  const pcts=ord.map(c=>(taxMap[c]/cityTax)*100);
+  const colors=ord.map((c,i)=>colorFn(c,i));
+  if(pieChart) pieChart.destroy();
+  if(barChart) barChart.destroy();
+
+  const barCard=document.getElementById('barCard');
+  const barScroll=document.getElementById('barScroll');
+  const barCanvas=document.getElementById('barChart');
+  const ROW_H=26;
+
+  if(currentView==='exp'){
+    const innerH=ord.length*ROW_H+80;
+    barScroll.style.overflowY='auto';
+    barScroll.style.height='';
+    barCanvas.style.height=innerH+'px';
+  } else {
+    barScroll.style.overflowY='visible';
+    barCanvas.style.removeProperty('height');
+  }
+
+  pieChart=new Chart(document.getElementById('pieChart').getContext('2d'),{
+    type:'doughnut',
+    data:{labels:ord,datasets:[{data:pcts,backgroundColor:colors,borderWidth:2,borderColor:'#fff',hoverOffset:8}]},
+    options:{layout:{padding:16},plugins:{legend:{display:true,position:'bottom',labels:{font:{family:'DM Sans',size:11},color:'#374151',padding:10,boxWidth:11,boxHeight:11}},tooltip:{callbacks:{label:ctx=>` ${pcts[ctx.dataIndex].toFixed(1)}%  \u00b7  ${fmt(taxAmts[ctx.dataIndex])}`}}},cutout:'50%'},
+    plugins:[{id:'sliceLabels',afterDraw(chart){const{ctx,chartArea:{top,bottom,left,right}}=chart;const cx=(left+right)/2,cy=(top+bottom)/2;ctx.save();chart.getDatasetMeta(0).data.forEach((arc,i)=>{if(pcts[i]<4.5)return;const angle=(arc.startAngle+arc.endAngle)/2,r=(arc.outerRadius+arc.innerRadius)/2;ctx.fillStyle='#fff';ctx.font='bold 11px "DM Sans",sans-serif';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText(pcts[i].toFixed(0)+'%',cx+Math.cos(angle)*r,cy+Math.sin(angle)*r);});ctx.restore();}}]
+  });
+  barChart=new Chart(barCanvas.getContext('2d'),{
+    type:'bar',
+    data:{labels:ord,datasets:[{data:taxAmts.map(a=>Math.round(a*100)/100),backgroundColor:colors,borderRadius:4,borderSkipped:false}]},
+    options:{
+      indexAxis:'y',
+      maintainAspectRatio:false,
+      layout:{padding:{right:72}},
+      plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>` ${fmt(ctx.parsed.x)}`}}},
+      scales:{
+        x:{grid:{color:'#f0ede8'},ticks:{callback:v=>'$'+v.toLocaleString(),font:{family:'DM Sans',size:11},color:'#9ca3af'}},
+        y:{grid:{display:false},ticks:{font:{family:'DM Sans',size:11},color:'#374151'},categoryPercentage:0.85,barPercentage:0.9}
+      }
+    },
+    plugins:[{id:'barEndLabels',afterDraw(chart){const{ctx}=chart;ctx.save();chart.getDatasetMeta(0).data.forEach((bar,i)=>{ctx.fillStyle='#374151';ctx.font='600 11px "DM Sans",sans-serif';ctx.textAlign='left';ctx.textBaseline='middle';ctx.fillText(fmt(taxAmts[i]),bar.x+6,bar.y);});ctx.restore();}}]
+  });
+  if(currentView==='dept') requestAnimationFrame(()=>barChart.resize());
+}
+
+function renderExpCharts(assessed,cityTax){
+  const expTax={};
+  Object.entries(EXP_WEIGHTS).forEach(([cat,w])=>{expTax[cat]=assessed*w;});
+  expTax['Debt Service']=assessed*MILL.debt;
+  expTax['TID']=assessed*MILL.tid;
+  const allKeys=Object.keys(expTax);
+  renderCharts(expTax,cityTax,allKeys,(c,i)=>EXP_COLORS[i%EXP_COLORS.length]);
+}
+
+function renderDeptTable(tree,catTax,cityTax){
+  const container=document.getElementById('deptTableBody');
+  container.innerHTML='';
+  for(const cat of ORDER.filter(c=>catTax[c]).sort((a,b)=>catTax[b]-catTax[a])){
+    const thisTax=catTax[cat];
+    const m=META[cat]||{color:'#888'};
+    const pct=(thisTax/cityTax)*100;
+    const isSingle=!!SINGLE[cat];
+    const catRow=document.createElement('div');
+    catRow.className='category-row';
+    const hdr=document.createElement('div');
+    hdr.className='category-header'+(isSingle?' no-drill':'');
+    hdr.innerHTML=`<span class="cat-chevron">&#9654;</span><span class="cat-name"><span class="cat-badge" style="background:${m.color}"></span>${cat}${infoIcon(cat)}</span><span class="cat-pct">${pct.toFixed(1)}%</span><span class="cat-bar-wrap"><div class="cat-bar-bg"><div class="cat-bar-fill" style="width:${Math.min(pct,100)}%;background:${m.color}"></div></div></span><span class="cat-amount">${fmt(thisTax)}</span>`;
+    catRow.appendChild(hdr);
+    if(!isSingle){
+      hdr.addEventListener('click',()=>catRow.classList.toggle('open'));
+      const body=document.createElement('div');
+      body.className='dept-rows';
+      catRow.appendChild(body);
+
+      // Use pre-computed rowTax values -- correct across mixed funds
+      const addExpSections=(ecMap,target)=>{
+        Object.entries(ecMap).map(([name,items])=>({name,taxTotal:items.reduce((s,r)=>s+r.rowTax,0)}))
+          .sort((a,b)=>b.taxTotal-a.taxTotal)
+          .forEach(ec=>{
+            const eSec=document.createElement('div');
+            eSec.className='exp-section';
+            const eHdr=document.createElement('div');
+            eHdr.className='exp-header';
+            eHdr.innerHTML=`<span class="exp-name">${ec.name}</span><span class="exp-amount">${fmt(ec.taxTotal)}</span>`;
+            eSec.appendChild(eHdr);
+            target.appendChild(eSec);
+          });
+      };
+
+      const deptList=Object.entries(tree[cat]||{})
+        .map(([name,ecMap])=>({name,ecMap,taxTotal:Object.values(ecMap).flat().reduce((s,r)=>s+r.rowTax,0)}))
+        .sort((a,b)=>b.taxTotal-a.taxTotal);
+
+      if(deptList.length===1){
+        addExpSections(deptList[0].ecMap,body);
+      } else {
+        for(const dept of deptList){
+          const deptTax=dept.taxTotal;
+          const deptPct=(deptTax/cityTax)*100;
+          const dSec=document.createElement('div');
+          dSec.className='dept-section';
+          const dHdr=document.createElement('div');
+          dHdr.className='dept-header';
+          dHdr.innerHTML=`<span class="dept-chevron">&#9654;</span><span class="dept-name">${dept.name}</span><span class="dept-pct">${deptPct.toFixed(1)}%</span><span class="dept-bar-wrap"><div class="cat-bar-bg"><div class="cat-bar-fill" style="width:${Math.min(deptPct,100)}%;background:${m.color}"></div></div></span><span class="dept-amount">${fmt(deptTax)}</span>`;
+          dSec.appendChild(dHdr);
+          const dBody=document.createElement('div');
+          dBody.className='exp-rows';
+          dSec.appendChild(dBody);
+          dHdr.addEventListener('click',e=>{e.stopPropagation();dSec.classList.toggle('open');});
+          addExpSections(dept.ecMap,dBody);
+          body.appendChild(dSec);
+        }
+      }
+    }
+    container.appendChild(catRow);
+  }
+}
+
+function renderExpTable(assessed,cityTax){
+  const container=document.getElementById('expTableBody');
+  container.innerHTML='';
+  const rows=Object.entries(EXP_WEIGHTS).map(([name,w],i)=>({name,tax:assessed*w,color:EXP_COLORS[i%EXP_COLORS.length],hasDept:!!EXP_DEPT_WEIGHTS[name]}));
+  rows.push({name:'Debt Service',tax:assessed*MILL.debt,color:META['Debt Service'].color,hasDept:false});
+  rows.push({name:'TID',tax:assessed*MILL.tid,color:META['TID'].color,hasDept:false});
+  rows.sort((a,b)=>b.tax-a.tax);
+
+  for(const row of rows){
+    const pct=(row.tax/cityTax)*100;
+
+    // Main row
+    const el=document.createElement('div');
+    el.className='exp-flat-row'+(row.hasDept?'':' no-expand');
+    el.innerHTML=`<span class="cat-chevron">&#9654;</span><span class="cat-name"><span class="cat-badge" style="background:${row.color}"></span>${row.name}${infoIcon(row.name,true)}</span><span class="cat-pct">${pct.toFixed(1)}%</span><span class="cat-bar-wrap"><div class="cat-bar-bg"><div class="cat-bar-fill" style="width:${Math.min(pct,100)}%;background:${row.color}"></div></div></span><span class="cat-amount">${fmt(row.tax)}</span>`;
+
+    // Sub-rows container
+    const subRows=document.createElement('div');
+    subRows.className='exp-sub-rows';
+
+    if(row.hasDept){
+      el.addEventListener('click',()=>el.classList.toggle('open'));
+
+      const deptWeights=EXP_DEPT_WEIGHTS[row.name];
+      // Sort by weight desc, take top 12
+      const sorted=Object.entries(deptWeights).sort((a,b)=>b[1]-a[1]).slice(0,12);
+      const maxW=sorted[0][1];
+      for(const[deptCat,w] of sorted){
+        const deptTax=assessed*w;
+        const deptPct=(deptTax/cityTax)*100;
+        const barPct=(w/maxW)*100;
+        const deptColor=META[deptCat]?.color||'#888';
+        const sub=document.createElement('div');
+        sub.className='exp-sub-row';
+        sub.innerHTML=`<span class="exp-sub-name"><span class="exp-sub-badge" style="background:${deptColor}"></span>${deptCat}</span><span class="exp-sub-pct">${deptPct.toFixed(1)}%</span><span class="exp-sub-bar"><div class="cat-bar-bg"><div class="cat-bar-fill" style="width:${barPct.toFixed(1)}%;background:${deptColor}"></div></div></span><span class="exp-sub-amt">${fmt(deptTax)}</span>`;
+        subRows.appendChild(sub);
+      }
+    }
+
+    container.appendChild(el);
+    container.appendChild(subRows);
+  }
+}
+
+function expandAll(){
+  document.querySelectorAll('#deptTableBody .category-row').forEach(r=>r.classList.add('open'));
+  document.querySelectorAll('#deptTableBody .dept-section').forEach(r=>r.classList.add('open'));
+}
+function collapseAll(){
+  document.querySelectorAll('#deptTableBody .category-row').forEach(r=>r.classList.remove('open'));
+  document.querySelectorAll('#deptTableBody .dept-section').forEach(r=>r.classList.remove('open'));
+}
+document.addEventListener('keydown',e=>{if(e.key==='Enter')calculate();});
+</script>
+</body>
+</html>
