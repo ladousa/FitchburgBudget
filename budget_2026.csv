@@ -1,0 +1,685 @@
+category,department,expense_category,exp_type_category,expense_name,amount,fund_key
+Buildings & Grounds,Building Inspection,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",EQUIPMENT EXPENSE,400,general
+Buildings & Grounds,Building Inspection,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",OPERATING MATERIALS & SUPPLIES,5000,general
+Buildings & Grounds,Building Inspection,Gasoline and Fuel,"Vehicle Expense, Gas, Fuel",GASOLINE/DIESEL FUEL,2000,general
+Buildings & Grounds,Building Inspection,General Office,General Office,OFFICE SUPPLIES & POSTAGE,900,general
+Buildings & Grounds,Building Inspection,General Office,General Office,PUBLIC INFORMATION & EDUCATION,200,general
+Buildings & Grounds,Building Inspection,General Office,General Office,"PUBLICATIONS, DUES",2000,general
+Buildings & Grounds,Building Inspection,IT Expenses,IT Expenses,IT CAPITAL ISF ALLOCATION,1295,general
+Buildings & Grounds,Building Inspection,IT Expenses,IT Expenses,IT OPERATING ISF ALLOCATION,35965,general
+Buildings & Grounds,Building Inspection,Insurance Expenses,Insurance Expenses,INSURANCE ISF ALLOCATION,13140,general
+Buildings & Grounds,Building Inspection,Salary & Benefits,Salary & Benefits,DENTAL INS,5776,general
+Buildings & Grounds,Building Inspection,Salary & Benefits,Salary & Benefits,DISABILITY INS,1700,general
+Buildings & Grounds,Building Inspection,Salary & Benefits,Salary & Benefits,FICA,28050,general
+Buildings & Grounds,Building Inspection,Salary & Benefits,Salary & Benefits,HEALTH INS,109204,general
+Buildings & Grounds,Building Inspection,Salary & Benefits,Salary & Benefits,LIFE INS,1766,general
+Buildings & Grounds,Building Inspection,Salary & Benefits,Salary & Benefits,LONGEVITY,1710,general
+Buildings & Grounds,Building Inspection,Salary & Benefits,Salary & Benefits,OVERTIME,4868,general
+Buildings & Grounds,Building Inspection,Salary & Benefits,Salary & Benefits,SALARIES & WAGES - BLDG INSP,360086,general
+Buildings & Grounds,Building Inspection,Salary & Benefits,Salary & Benefits,WRS,26400,general
+Buildings & Grounds,Building Inspection,Software and Contracted Services,Software and Contracted Services,"SOFTWARE, SUBSCRIPTIONS, MAINT",440,general
+Buildings & Grounds,Building Inspection,"Training, Travel, Tuition","Training, Travel, Tuition",TRAINING & TRAVEL,10000,general
+Buildings & Grounds,Building Inspection,Uniforms & Protective Gear,"Equipment: Materials, Supplies, Replacement Funds",UNIFORMS & PROTECTIVE GEAR,2000,general
+Buildings & Grounds,Building Inspection,Vehicle Expense,"Vehicle Expense, Gas, Fuel",LEVY-BLDG INSPECT VEH,5912,capital
+Buildings & Grounds,Building Inspection,Vehicle Expense,"Vehicle Expense, Gas, Fuel",VEHICLE EXPENSE,3000,general
+Buildings & Grounds,City Buildings,Building Expenses,Building Expenses,LEVY-CITY CAMPUS BLDG SYSTEMS,62292,capital
+Buildings & Grounds,City Buildings,Building Expenses,Building Expenses,LEVY-MAINT FAC BLDG SYS REPLAC,9814,capital
+Buildings & Grounds,City Buildings,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",BLDG CUSTODIAL SUPPLIES,2000,general
+Buildings & Grounds,City Buildings,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",BLDG CUSTODIAL SUPPLIES,2500,general
+Buildings & Grounds,City Buildings,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",BLDG CUSTODIAL SUPPLIES,8000,general
+Buildings & Grounds,City Buildings,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",EQUIPMENT EXPENSE,2000,general
+Buildings & Grounds,City Buildings,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",REPAIR & MAINT SUPPLIES,2500,general
+Buildings & Grounds,City Buildings,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",REPAIR & MAINTENANCE SUPPLIES,5000,general
+Buildings & Grounds,City Buildings,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",REPAIR AND MAINT SUPPLIES,8000,general
+Buildings & Grounds,City Buildings,Gasoline and Fuel,"Vehicle Expense, Gas, Fuel",GASOLINE/DIESEL FUEL,805,general
+Buildings & Grounds,City Buildings,IT Expenses,IT Expenses,IT CAPITAL ISF ALLOCATION,760,general
+Buildings & Grounds,City Buildings,IT Expenses,IT Expenses,IT OPERATING ISF ALLOCATION,22810,general
+Buildings & Grounds,City Buildings,Insurance Expenses,Insurance Expenses,INSURANCE ISF ALLOCATION,850,general
+Buildings & Grounds,City Buildings,Insurance Expenses,Insurance Expenses,INSURANCE ISF ALLOCATION,25445,general
+Buildings & Grounds,City Buildings,Salary & Benefits,Salary & Benefits,B&G ON CALL PAY,19822,general
+Buildings & Grounds,City Buildings,Salary & Benefits,Salary & Benefits,DENTAL INS,2630,general
+Buildings & Grounds,City Buildings,Salary & Benefits,Salary & Benefits,DISABILITY INS,167,general
+Buildings & Grounds,City Buildings,Salary & Benefits,Salary & Benefits,DISABILITY INS,943,general
+Buildings & Grounds,City Buildings,Salary & Benefits,Salary & Benefits,FICA,2062,general
+Buildings & Grounds,City Buildings,Salary & Benefits,Salary & Benefits,FICA,18454,general
+Buildings & Grounds,City Buildings,Salary & Benefits,Salary & Benefits,HEALTH INS,50769,general
+Buildings & Grounds,City Buildings,Salary & Benefits,Salary & Benefits,LIFE INS,39,general
+Buildings & Grounds,City Buildings,Salary & Benefits,Salary & Benefits,LIFE INS,1033,general
+Buildings & Grounds,City Buildings,Salary & Benefits,Salary & Benefits,LONGEVITY,1800,general
+Buildings & Grounds,City Buildings,Salary & Benefits,Salary & Benefits,OVERTIME,6811,general
+Buildings & Grounds,City Buildings,Salary & Benefits,Salary & Benefits,SALARIES & WAGES,26952,general
+Buildings & Grounds,City Buildings,Salary & Benefits,Salary & Benefits,SALARIES & WAGES-NEW CITY HALL,212801,general
+Buildings & Grounds,City Buildings,Salary & Benefits,Salary & Benefits,WRS,1941,general
+Buildings & Grounds,City Buildings,Salary & Benefits,Salary & Benefits,WRS,15614,general
+Buildings & Grounds,City Buildings,Software and Contracted Services,Software and Contracted Services,OTHER CONTRACTUAL SERVICES,600,general
+Buildings & Grounds,City Buildings,Software and Contracted Services,Software and Contracted Services,REPAIR & MAINT - BY OTHERS,47600,general
+Buildings & Grounds,City Buildings,Software and Contracted Services,Software and Contracted Services,REPAIRS & MAINT - BY OTHERS,11325,general
+Buildings & Grounds,City Buildings,Software and Contracted Services,Software and Contracted Services,REPAIRS & MAINTENANCE BY OTHER,29250,general
+Buildings & Grounds,City Buildings,Uniforms & Protective Gear,"Equipment: Materials, Supplies, Replacement Funds",UNIFORMS & PROTECTIVE GEAR,1100,general
+Buildings & Grounds,City Buildings,Utilities,Utilities,UTILITIES,28840,general
+Buildings & Grounds,City Buildings,Utilities,Utilities,UTILITIES,38575,general
+Buildings & Grounds,City Buildings,Utilities,Utilities,UTILITIES,103000,general
+Buildings & Grounds,City Buildings,Vehicle Expense,"Vehicle Expense, Gas, Fuel",LEVY-B&G FLEET,4668,capital
+Buildings & Grounds,City Buildings,Vehicle Expense,"Vehicle Expense, Gas, Fuel",VEHICLE EXPENSE,1000,general
+Community,Community Center,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",BLDG CUSTODIAL SUPPLIES,7000,general
+Community,Community Center,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",EQUIPMENT EXPENSE,2000,general
+Community,Community Center,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",REPAIR & MAINT SUPPLIES,10000,general
+Community,Community Center,Insurance Expenses,Insurance Expenses,INSURANCE ISF ALLOCATION,5685,general
+Community,Community Center,Salary & Benefits,Salary & Benefits,FICA,1697,general
+Community,Community Center,Salary & Benefits,Salary & Benefits,PT/LTE/SEASONAL WAGES,22178,general
+Community,Community Center,Software and Contracted Services,Software and Contracted Services,OTHER CONTRACTUAL SERVICES,500,general
+Community,Community Center,Software and Contracted Services,Software and Contracted Services,REPAIRS & MAINT - BY OTHERS,26200,general
+Community,Community Center,Utilities,Utilities,UTILITIES & PAY TELEPHONE,38625,general
+Community,HNI,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",OPERATING MATERIALS & SUPP,2000,general
+Community,HNI,General Office,General Office,PUBLIC INFORMATION & EDUCATION,300,general
+Community,HNI,General Office,General Office,"PUBLICATIONS, DUES",445,general
+Community,HNI,Grants,Grants,GRANTS TO OTHERS,63000,general
+Community,HNI,IT Expenses,IT Expenses,IT CAPITAL ISF ALLOCATION,305,general
+Community,HNI,IT Expenses,IT Expenses,IT OPERATING ISF ALLOCATION,6800,general
+Community,HNI,Insurance Expenses,Insurance Expenses,INSURANCE ISF ALLOCATION,1652,general
+Community,HNI,Salary & Benefits,Salary & Benefits,DISABILITY INS,400,general
+Community,HNI,Salary & Benefits,Salary & Benefits,FICA,8029,general
+Community,HNI,Salary & Benefits,Salary & Benefits,LIFE INS,51,general
+Community,HNI,Salary & Benefits,Salary & Benefits,PER DIEMS - COMMISSIONS & BDS,1280,general
+Community,HNI,Salary & Benefits,Salary & Benefits,PT/LTE/SEASONAL,19350,general
+Community,HNI,Salary & Benefits,Salary & Benefits,SALARIES & WAGES-HNI,85606,general
+Community,HNI,Salary & Benefits,Salary & Benefits,WRS,6164,general
+Community,HNI,Software and Contracted Services,Software and Contracted Services,"SOFTWARE, SUBSCRIPTIONS, MAINT",400,general
+Community,HNI,"Training, Travel, Tuition","Training, Travel, Tuition",TRAINING & TRAVEL,2500,general
+Community,HNI,"Training, Travel, Tuition","Training, Travel, Tuition",VEHICLE USE REIMBURSEMENT,280,general
+Community,Neighborhood Hub,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",BLDG CUSTODIAL SUPPLIES,4000,general
+Community,Neighborhood Hub,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",EQUIPMENT EXPENSE,7500,general
+Community,Neighborhood Hub,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",REPAIR & MAINT SUPPLIES,5000,general
+Community,Neighborhood Hub,Insurance Expenses,Insurance Expenses,INSURANCE ISF ALLOCATION,4820,general
+Community,Neighborhood Hub,Salary & Benefits,Salary & Benefits,DISABILITY INS,167,general
+Community,Neighborhood Hub,Salary & Benefits,Salary & Benefits,FICA,2062,general
+Community,Neighborhood Hub,Salary & Benefits,Salary & Benefits,LIFE INS,39,general
+Community,Neighborhood Hub,Salary & Benefits,Salary & Benefits,SALARIES & WAGES,26952,general
+Community,Neighborhood Hub,Salary & Benefits,Salary & Benefits,WRS,1941,general
+Community,Neighborhood Hub,Software and Contracted Services,Software and Contracted Services,REPAIRS & MAINT - BY OTHERS,11500,general
+Community,Neighborhood Hub,Utilities,Utilities,UTILITIES & PAY TELEPHONE,24720,general
+Community,Senior Center,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",EQUIPMENT EXPENSE,2250,general
+Community,Senior Center,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",LEVY-SR/CC SEATING AND TABLES,7213,capital
+Community,Senior Center,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",OPERATING MATERIALS & SUPPLIES,600,general
+Community,Senior Center,Gasoline and Fuel,"Vehicle Expense, Gas, Fuel",GASOLINE/DIESEL FUEL,400,general
+Community,Senior Center,General Office,General Office,OFFICE SUPPLIES & POSTAGE,1650,general
+Community,Senior Center,General Office,General Office,PUBLIC INFORMATION & EDUCATION,1000,general
+Community,Senior Center,General Office,General Office,"PUBLICATIONS, DUES",420,general
+Community,Senior Center,IT Expenses,IT Expenses,IT CAPITAL ISF ALLOCATION,2855,general
+Community,Senior Center,IT Expenses,IT Expenses,IT OPERATING ISF ALLOCATION,45490,general
+Community,Senior Center,Insurance Expenses,Insurance Expenses,INSURANCE ISF ALLOCATION,17212,general
+Community,Senior Center,Program Expenses,Program Expenses,NUTRITION PROGRAM,3500,general
+Community,Senior Center,Program Expenses,Program Expenses,SENIOR PROGRAMS EXPENSE,2500,general
+Community,Senior Center,Program Expenses,Program Expenses,VOLUNTEER PROGRAM EXP,2500,general
+Community,Senior Center,Salary & Benefits,Salary & Benefits,DENTAL INS,8436,general
+Community,Senior Center,Salary & Benefits,Salary & Benefits,DISABILITY INS,2681,general
+Community,Senior Center,Salary & Benefits,Salary & Benefits,FICA,46497,general
+Community,Senior Center,Salary & Benefits,Salary & Benefits,HEALTH INS,162391,general
+Community,Senior Center,Salary & Benefits,Salary & Benefits,LIFE INS,2110,general
+Community,Senior Center,Salary & Benefits,Salary & Benefits,LONGEVITY,4410,general
+Community,Senior Center,Salary & Benefits,Salary & Benefits,PER DIEMS - COMM ON AGING,900,general
+Community,Senior Center,Salary & Benefits,Salary & Benefits,PT/LTE/SEASONAL WAGES,18303,general
+Community,Senior Center,Salary & Benefits,Salary & Benefits,SALARIES & WAGES - SENIOR CTR,585082,general
+Community,Senior Center,Salary & Benefits,Salary & Benefits,WRS,42444,general
+Community,Senior Center,Software and Contracted Services,Software and Contracted Services,OTHER CONTRACTUAL,13940,general
+Community,Senior Center,Software and Contracted Services,Software and Contracted Services,REPAIRS & MAINT - BY OTHERS,1000,general
+Community,Senior Center,Software and Contracted Services,Software and Contracted Services,"SOFTWARE, SUBSCRIPTIONS, MAINT",1035,general
+Community,Senior Center,"Training, Travel, Tuition","Training, Travel, Tuition",TRAINING & TRAVEL,2600,general
+Community,Senior Center,"Training, Travel, Tuition","Training, Travel, Tuition",VEHICLE USE REIMBURSEMENT,400,general
+Community,Senior Center,Vehicle Expense,"Vehicle Expense, Gas, Fuel",LEVY-SENIOR CENTER FLEET VEH,2701,capital
+Community,Senior Center,Vehicle Expense,"Vehicle Expense, Gas, Fuel","VEHICLE EXPENSE (G&O, REPAIRS)",200,general
+Fire/EMS,Fire Department,Building Expenses,Building Expenses,LEVY-FIRE HEADQUARTERS,7782,capital
+Fire/EMS,Fire Department,Building Expenses,Building Expenses,LEVY-FIRE STATION 2 BLDG SYS,17771,capital
+Fire/EMS,Fire Department,Building Expenses,Building Expenses,LEVY-FIRE STATION 3 BLDG SYS,17770,capital
+Fire/EMS,Fire Department,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",BLDG CUSTODIAL SUPPLIES,4000,general
+Fire/EMS,Fire Department,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",BLDG CUSTODIAL SUPPLIES,4000,general
+Fire/EMS,Fire Department,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",EQUIPMENT EXPENSE,1500,general
+Fire/EMS,Fire Department,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",EQUIPMENT EXPENSE,1000,general
+Fire/EMS,Fire Department,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",EQUIPMENT EXPENSE,25000,general
+Fire/EMS,Fire Department,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",MEDICAL/EMS SUPPLIES,10815,general
+Fire/EMS,Fire Department,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",OPERATING MATERIALS & SUPPLIES,10300,general
+Fire/EMS,Fire Department,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",REPAIR & MAINT SUPPLIES,4000,general
+Fire/EMS,Fire Department,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",REPAIR & MAINT SUPPLIES,2500,general
+Fire/EMS,Fire Department,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",REPAIR & MAINT SUPPLIES,3180,general
+Fire/EMS,Fire Department,Equipment Replacement Funds,"Equipment: Materials, Supplies, Replacement Funds",LEVY-FRATS,16391,capital
+Fire/EMS,Fire Department,Gasoline and Fuel,"Vehicle Expense, Gas, Fuel",GASOLINE/DIESEL FUEL,41200,general
+Fire/EMS,Fire Department,General Office,General Office,COMMUNICATIONS EXPENSE,11845,general
+Fire/EMS,Fire Department,General Office,General Office,LEASE/RENTAL COSTS,9270,general
+Fire/EMS,Fire Department,General Office,General Office,OFFICE SUPPLIES & POSTAGE,3090,general
+Fire/EMS,Fire Department,General Office,General Office,PUBLIC INFORMATION & EDUCATION,5150,general
+Fire/EMS,Fire Department,General Office,General Office,"PUBLICATIONS, DUES",5800,general
+Fire/EMS,Fire Department,IT Expenses,IT Expenses,IT CAPITAL ISF ALLOCATION,21755,general
+Fire/EMS,Fire Department,IT Expenses,IT Expenses,IT OPERATING ISF ALLOCATION,243695,general
+Fire/EMS,Fire Department,Insurance Expenses,Insurance Expenses,INSURANCE ISF ALLOCATION,159823,general
+Fire/EMS,Fire Department,Salary & Benefits,Salary & Benefits,DENTAL INS,22715,general
+Fire/EMS,Fire Department,Salary & Benefits,Salary & Benefits,DISABILITY INS,8098,general
+Fire/EMS,Fire Department,Salary & Benefits,Salary & Benefits,FICA,205120,general
+Fire/EMS,Fire Department,Salary & Benefits,Salary & Benefits,HEALTH INS,458481,general
+Fire/EMS,Fire Department,Salary & Benefits,Salary & Benefits,HOLIDAY PREMIUM,26174,general
+Fire/EMS,Fire Department,Salary & Benefits,Salary & Benefits,LIFE INS,4964,general
+Fire/EMS,Fire Department,Salary & Benefits,Salary & Benefits,LONGEVITY,7740,general
+Fire/EMS,Fire Department,Salary & Benefits,Salary & Benefits,OVERTIME,215968,general
+Fire/EMS,Fire Department,Salary & Benefits,Salary & Benefits,POC SERVICES,614374,general
+Fire/EMS,Fire Department,Salary & Benefits,Salary & Benefits,PT/LTE/SEASONAL WAGES,23400,general
+Fire/EMS,Fire Department,Salary & Benefits,Salary & Benefits,SALARIES & WAGES - FIRE,1786160,general
+Fire/EMS,Fire Department,Salary & Benefits,Salary & Benefits,TAXABLE CLOTHING ALLOWANCE,7500,general
+Fire/EMS,Fire Department,Salary & Benefits,Salary & Benefits,WRS,365801,general
+Fire/EMS,Fire Department,Software and Contracted Services,Software and Contracted Services,OTHER CONTRACTUAL SERVICES,8500,general
+Fire/EMS,Fire Department,Software and Contracted Services,Software and Contracted Services,PROFESSIONAL SERVICES,515,general
+Fire/EMS,Fire Department,Software and Contracted Services,Software and Contracted Services,PUBLIC NOTICES/ADS,515,general
+Fire/EMS,Fire Department,Software and Contracted Services,Software and Contracted Services,REPAIRS & MAINT - BY OTHERS,19550,general
+Fire/EMS,Fire Department,Software and Contracted Services,Software and Contracted Services,REPAIRS & MAINT - BY OTHERS,19500,general
+Fire/EMS,Fire Department,Software and Contracted Services,Software and Contracted Services,REPAIRS & MAINT - BY OTHERS,12000,general
+Fire/EMS,Fire Department,Software and Contracted Services,Software and Contracted Services,"SOFTWARE, SUBSCRIPTIONS, MAINT",20675,general
+Fire/EMS,Fire Department,"Training, Travel, Tuition","Training, Travel, Tuition",TRAINING & TRAVEL,26045,general
+Fire/EMS,Fire Department,"Training, Travel, Tuition","Training, Travel, Tuition",TUITION REIMBURSEMENT,20155,general
+Fire/EMS,Fire Department,Uniforms & Protective Gear,"Equipment: Materials, Supplies, Replacement Funds",PROTECTIVE GEAR,66545,general
+Fire/EMS,Fire Department,Uniforms & Protective Gear,"Equipment: Materials, Supplies, Replacement Funds",UNIFORMS,11800,general
+Fire/EMS,Fire Department,Utilities,Utilities,UTILITIES,29355,general
+Fire/EMS,Fire Department,Utilities,Utilities,UTILITIES,37500,general
+Fire/EMS,Fire Department,Utilities,Utilities,UTILITIES,7060,general
+Fire/EMS,Fire Department,Vehicle Expense,"Vehicle Expense, Gas, Fuel",LEVY-FD FLEET VEHICLES,17569,capital
+Fire/EMS,Fire Department,Vehicle Expense,"Vehicle Expense, Gas, Fuel",LEVY-FIRE WATER TENDERS,47641,capital
+Fire/EMS,Fire Department,Vehicle Expense,"Vehicle Expense, Gas, Fuel","VEHICLE EXPENSE (G&O, REPAIRS)",60000,general
+Fire/EMS,Other Public Safety,DaneCom System,Police/Fire Systems,DANE COM/ANALOG TACTICAL,146500,general
+Fire/EMS,Other Public Safety,EMS,EMS,FITCHRONA EMS CONTRIBUTION,1450629,general
+Fire/EMS,Other Public Safety,EMS,EMS,LEVY-EMS FLEET REPLACEMENT,131752,capital
+Fire/EMS,Other Public Safety,EMS,EMS,WEIGHTS & MEASURES,6000,general
+Fire/EMS,Other Public Safety,Salary & Benefits,Salary & Benefits,PER DIEMS - POLICE & FIRE COMM,1500,general
+General Government,Admin,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",EQUIPMENT OPERATING EXPENSE,100,general
+General Government,Admin,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",OPERATING MATERIALS & SUPP,300,general
+General Government,Admin,Gasoline and Fuel,"Vehicle Expense, Gas, Fuel",GASOLINE/DIESEL FUEL,350,general
+General Government,Admin,General Office,General Office,OFFICE SUPPLIES & POSTAGE,350,general
+General Government,Admin,General Office,General Office,PUBLIC INFORMATION & EDUCATION,9000,general
+General Government,Admin,General Office,General Office,PUBLICATIONS & DUES,2625,general
+General Government,Admin,IT Expenses,IT Expenses,IT CAPITAL ISF ALLOCATION,915,general
+General Government,Admin,IT Expenses,IT Expenses,IT OPERATING ISF ALLOCATION,22515,general
+General Government,Admin,Insurance Expenses,Insurance Expenses,INSURANCE ISF ALLOCATION,3750,general
+General Government,Admin,Salary & Benefits,Salary & Benefits,Admin Holiday Premium,93,general
+General Government,Admin,Salary & Benefits,Salary & Benefits,DENTAL INS,4236,general
+General Government,Admin,Salary & Benefits,Salary & Benefits,DISABILITY INS,1200,general
+General Government,Admin,Salary & Benefits,Salary & Benefits,FICA,32312,general
+General Government,Admin,Salary & Benefits,Salary & Benefits,HEALTH INS,79872,general
+General Government,Admin,Salary & Benefits,Salary & Benefits,LIFE INS,1189,general
+General Government,Admin,Salary & Benefits,Salary & Benefits,LONGEVITY,1170,general
+General Government,Admin,Salary & Benefits,Salary & Benefits,SALARIES & WAGES-ADMIN,421117,general
+General Government,Admin,Salary & Benefits,Salary & Benefits,WRS,30411,general
+General Government,Admin,Software and Contracted Services,Software and Contracted Services,"SOFTWARE, SUBSCRIPTIONS, MAINT",125,general
+General Government,Admin,"Training, Travel, Tuition","Training, Travel, Tuition",TRAINING & TRAVEL,8000,general
+General Government,Admin,"Training, Travel, Tuition","Training, Travel, Tuition",VEHICLE USE REIMBURSEMENT,875,general
+General Government,Admin,Vehicle Expense,"Vehicle Expense, Gas, Fuel",LEVY-GENERAL FLEET VEHICLES,2864,capital
+General Government,Admin,Vehicle Expense,"Vehicle Expense, Gas, Fuel","VEHICLE EXPENSE (G&O, REPAIRS)",500,general
+General Government,Assessing,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",EQUIPMENT OPERATING EXPENSE,50,general
+General Government,Assessing,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",OPERATING MATERIALS & SUPPLIES,300,general
+General Government,Assessing,Gasoline and Fuel,"Vehicle Expense, Gas, Fuel",GASOLINE/DIESEL FUEL,700,general
+General Government,Assessing,General Office,General Office,OFFICE SUPPLIES & POSTAGE,3755,general
+General Government,Assessing,General Office,General Office,"PUBLICATIONS, DUES",1070,general
+General Government,Assessing,IT Expenses,IT Expenses,IT CAPITAL ISF ALLOCATION,1525,general
+General Government,Assessing,IT Expenses,IT Expenses,IT OPERATING ISF ALLOCATION,32570,general
+General Government,Assessing,Insurance Expenses,Insurance Expenses,INSURANCE ISF ALLOCATION,12260,general
+General Government,Assessing,Salary & Benefits,Salary & Benefits,DENTAL INS,5259,general
+General Government,Assessing,Salary & Benefits,Salary & Benefits,DISABILITY INS,1991,general
+General Government,Assessing,Salary & Benefits,Salary & Benefits,FICA,33030,general
+General Government,Assessing,Salary & Benefits,Salary & Benefits,HEALTH INS,101537,general
+General Government,Assessing,Salary & Benefits,Salary & Benefits,LIFE INS,749,general
+General Government,Assessing,Salary & Benefits,Salary & Benefits,OVERTIME WAGES,4117,general
+General Government,Assessing,Salary & Benefits,Salary & Benefits,PER DIEMS - BOR,630,general
+General Government,Assessing,Salary & Benefits,Salary & Benefits,SALARIES & WAGES-ASSESSORS OFC,427643,general
+General Government,Assessing,Salary & Benefits,Salary & Benefits,WRS,31087,general
+General Government,Assessing,Software and Contracted Services,Software and Contracted Services,OTHER CONTRACTUAL,27850,general
+General Government,Assessing,Software and Contracted Services,Software and Contracted Services,"SOFTWARE, SUBSCRIPTIONS, MAINT",20400,general
+General Government,Assessing,"Training, Travel, Tuition","Training, Travel, Tuition",TRAINING & TRAVEL,3600,general
+General Government,Assessing,"Training, Travel, Tuition","Training, Travel, Tuition",TUITION REIMBURSEMENT,650,general
+General Government,Assessing,"Training, Travel, Tuition","Training, Travel, Tuition",VEHICLE USE REIMBURSEMENT,350,general
+General Government,Assessing,Uniforms & Protective Gear,"Equipment: Materials, Supplies, Replacement Funds",UNIFORMS & PROTECTIVE GEAR,240,general
+General Government,Assessing,Vehicle Expense,"Vehicle Expense, Gas, Fuel",LEVY-ASSESSING FLEET VEHICLES,3501,capital
+General Government,Assessing,Vehicle Expense,"Vehicle Expense, Gas, Fuel","VEHICLE EXPENSE (G&O, REPAIRS)",1000,general
+General Government,City Clerk,Election Costs,Election Costs,ELECTION COSTS,46075,general
+General Government,City Clerk,General Office,General Office,LEASE/RENTAL COSTS,4015,general
+General Government,City Clerk,General Office,General Office,OFFICE SUPPLIES & POSTAGE,4800,general
+General Government,City Clerk,General Office,General Office,"PUBLICATIONS, DUES",640,general
+General Government,City Clerk,IT Expenses,IT Expenses,IT CAPITAL ISF ALLOCATION,1220,general
+General Government,City Clerk,IT Expenses,IT Expenses,IT OPERATING ISF ALLOCATION,29895,general
+General Government,City Clerk,Insurance Expenses,Insurance Expenses,INSURANCE ISF ALLOCATION,3794,general
+General Government,City Clerk,Salary & Benefits,Salary & Benefits,DENTAL INS,4748,general
+General Government,City Clerk,Salary & Benefits,Salary & Benefits,DISABILITY INS,1486,general
+General Government,City Clerk,Salary & Benefits,Salary & Benefits,FICA,22825,general
+General Government,City Clerk,Salary & Benefits,Salary & Benefits,HEALTH INS,90705,general
+General Government,City Clerk,Salary & Benefits,Salary & Benefits,LIFE INS,1244,general
+General Government,City Clerk,Salary & Benefits,Salary & Benefits,LONGEVITY BENEFIT,765,general
+General Government,City Clerk,Salary & Benefits,Salary & Benefits,OVERTIME WAGES,6945,general
+General Government,City Clerk,Salary & Benefits,Salary & Benefits,PT/LTE/SEASONAL WAGES,111502,general
+General Government,City Clerk,Salary & Benefits,Salary & Benefits,SALARIES & WAGES - CLERKS OFFC,288069,general
+General Government,City Clerk,Salary & Benefits,Salary & Benefits,WRS,21296,general
+General Government,City Clerk,Software and Contracted Services,Software and Contracted Services,OTHER CONTRACTUAL,1080,general
+General Government,City Clerk,Software and Contracted Services,Software and Contracted Services,PROFESSIONAL SERVICES,2500,general
+General Government,City Clerk,Software and Contracted Services,Software and Contracted Services,PUBLIC NOTICES & ADVERTISEMENT,19500,general
+General Government,City Clerk,Software and Contracted Services,Software and Contracted Services,"SOFTWARE, SUBSCRIPTIONS, MAINT",29370,general
+General Government,City Clerk,"Training, Travel, Tuition","Training, Travel, Tuition",TRAINING & TRAVEL,6400,general
+General Government,City Clerk,"Training, Travel, Tuition","Training, Travel, Tuition",VEHICLE USE REIMBURSEMENT,1095,general
+General Government,FACTv,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",LEVY-CITY-WIDE AV EQUIP,22650,capital
+General Government,FACTv,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",LEVY-VIDEO SWITCHERS,5950,capital
+General Government,FACTv,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",OPERATING MATERIALS & SUPPLIES,9350,general
+General Government,FACTv,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",REPAIRS & MAINT SUPPLIES,3000,general
+General Government,FACTv,Gasoline and Fuel,"Vehicle Expense, Gas, Fuel",GASOLINE/DIESEL FUEL,875,general
+General Government,FACTv,General Office,General Office,OFFICE SUPPLIES & POSTAGE,500,general
+General Government,FACTv,General Office,General Office,PUBLIC INFORMATION & EDUCATION,1000,general
+General Government,FACTv,General Office,General Office,"PUBLICATIONS, DUES",1695,general
+General Government,FACTv,IT Expenses,IT Expenses,IT CAPITAL ISF ALLOCATION,12565,general
+General Government,FACTv,IT Expenses,IT Expenses,IT OPERATING ISF ALLOCATION,32970,general
+General Government,FACTv,Insurance Expenses,Insurance Expenses,INSURANCE ISF ALLOCATION,10270,general
+General Government,FACTv,Salary & Benefits,Salary & Benefits,DENTAL INS,3336,general
+General Government,FACTv,Salary & Benefits,Salary & Benefits,DISABILITY INS,1193,general
+General Government,FACTv,Salary & Benefits,Salary & Benefits,FACTv Holiday Premium,126,general
+General Government,FACTv,Salary & Benefits,Salary & Benefits,FICA,21724,general
+General Government,FACTv,Salary & Benefits,Salary & Benefits,HEALTH INS,64081,general
+General Government,FACTv,Salary & Benefits,Salary & Benefits,LIFE INS,744,general
+General Government,FACTv,Salary & Benefits,Salary & Benefits,LONGEVITY,675,general
+General Government,FACTv,Salary & Benefits,Salary & Benefits,PT/LTE/SEASONAL WAGES,8986,general
+General Government,FACTv,Salary & Benefits,Salary & Benefits,SALARIES & WAGES - CABLE,274181,general
+General Government,FACTv,Salary & Benefits,Salary & Benefits,WRS,19799,general
+General Government,FACTv,Software and Contracted Services,Software and Contracted Services,OTHER CONTRACTUAL SERVICES,1000,general
+General Government,FACTv,Software and Contracted Services,Software and Contracted Services,REPAIRS & MAINT - BY OTHERS,3000,general
+General Government,FACTv,Software and Contracted Services,Software and Contracted Services,"SOFTWARE, SUBSCRIPTIONS, MAINT",16230,general
+General Government,FACTv,"Training, Travel, Tuition","Training, Travel, Tuition",TRAINING & TRAVEL,3500,general
+General Government,FACTv,"Training, Travel, Tuition","Training, Travel, Tuition",VEHICLE USE REIMBURSEMENT,115,general
+General Government,FACTv,Vehicle Expense,"Vehicle Expense, Gas, Fuel",LEVY-FACTv FLEET VEHICLES,2251,capital
+General Government,FACTv,Vehicle Expense,"Vehicle Expense, Gas, Fuel",VEHICLE EXPENSE,2500,general
+General Government,Finance,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",EQUIPMENT OPERATING EXPENSE,50,general
+General Government,Finance,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",OPERATING MATERIALS & SUPPLIES,2405,general
+General Government,Finance,Gasoline and Fuel,"Vehicle Expense, Gas, Fuel",GASOLINE/DIESEL FUEL,175,general
+General Government,Finance,General Office,General Office,OFFICE SUPPLIES & POSTAGE,7100,general
+General Government,Finance,General Office,General Office,"PUBLICATIONS, DUES",1335,general
+General Government,Finance,IT Expenses,IT Expenses,IT CAPITAL ISF ALLOCATION,1175,general
+General Government,Finance,IT Expenses,IT Expenses,IT OPERATING ISF ALLOCATION,24480,general
+General Government,Finance,Insurance Expenses,Insurance Expenses,INSURANCE ISF ALLOCATION,4950,general
+General Government,Finance,Salary & Benefits,Salary & Benefits,DENTAL INS,5076,general
+General Government,Finance,Salary & Benefits,Salary & Benefits,DISABILITY INS,1491,general
+General Government,Finance,Salary & Benefits,Salary & Benefits,FICA,28569,general
+General Government,Finance,Salary & Benefits,Salary & Benefits,Finance Holiday Premium,311,general
+General Government,Finance,Salary & Benefits,Salary & Benefits,HEALTH INS,102502,general
+General Government,Finance,Salary & Benefits,Salary & Benefits,LIFE INS,887,general
+General Government,Finance,Salary & Benefits,Salary & Benefits,LONGEVITY BENEFIT,1091,general
+General Government,Finance,Salary & Benefits,Salary & Benefits,OVERTIME WAGES,744,general
+General Government,Finance,Salary & Benefits,Salary & Benefits,PT/LTE/SEASONAL WAGES,4415,general
+General Government,Finance,Salary & Benefits,Salary & Benefits,SALARIES & WAGES - FINANCE,366883,general
+General Government,Finance,Salary & Benefits,Salary & Benefits,WRS,26570,general
+General Government,Finance,Software and Contracted Services,Software and Contracted Services,AUDIT & FINANCIAL CONSULTING,54090,general
+General Government,Finance,Software and Contracted Services,Software and Contracted Services,OTHER CONTRACTUAL,1350,general
+General Government,Finance,Software and Contracted Services,Software and Contracted Services,"SOFTWARE, SUBSCRIPTIONS, MAINT",283565,general
+General Government,Finance,"Training, Travel, Tuition","Training, Travel, Tuition",TRAINING & TRAVEL,8400,general
+General Government,Finance,"Training, Travel, Tuition","Training, Travel, Tuition",VEHICLE USE REIMBURSEMENT,665,general
+General Government,HR,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",EQUIPMENT OPERATING EXPENSE,2000,general
+General Government,HR,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",OPERATING MATERIALS & SUPP,1300,general
+General Government,HR,General Office,General Office,OFFICE SUPPLIES & POSTAGE,500,general
+General Government,HR,General Office,General Office,"PUBLICATIONS, DUES",1810,general
+General Government,HR,IT Expenses,IT Expenses,IT CAPITAL ISF ALLOCATION,1220,general
+General Government,HR,IT Expenses,IT Expenses,IT OPERATING ISF ALLOCATION,24795,general
+General Government,HR,Insurance Expenses,Insurance Expenses,INSURANCE ISF ALLOCATION,2745,general
+General Government,HR,Salary & Benefits,Salary & Benefits,DENTAL INS,4236,general
+General Government,HR,Salary & Benefits,Salary & Benefits,DISABILITY INS,1137,general
+General Government,HR,Salary & Benefits,Salary & Benefits,FICA,20061,general
+General Government,HR,Salary & Benefits,Salary & Benefits,HEALTH INS,79872,general
+General Government,HR,Salary & Benefits,Salary & Benefits,LIFE INS,698,general
+General Government,HR,Salary & Benefits,Salary & Benefits,LONGEVITY,585,general
+General Government,HR,Salary & Benefits,Salary & Benefits,PER DIEMS - CEAC,1600,general
+General Government,HR,Salary & Benefits,Salary & Benefits,SALARIES & WAGES-HR,261647,general
+General Government,HR,Salary & Benefits,Salary & Benefits,WRS,18881,general
+General Government,HR,Software and Contracted Services,Software and Contracted Services,OTHER CONTRACTUAL SERVICES,8000,general
+General Government,HR,Software and Contracted Services,Software and Contracted Services,PROFESSIONAL SERVICES,1625,general
+General Government,HR,Software and Contracted Services,Software and Contracted Services,RECRUITMENT & TEST - FD,8440,general
+General Government,HR,Software and Contracted Services,Software and Contracted Services,RECRUITMENT & TEST - GEN,4340,general
+General Government,HR,Software and Contracted Services,Software and Contracted Services,RECRUITMENT & TEST - HIGHWAY,1815,general
+General Government,HR,Software and Contracted Services,Software and Contracted Services,RECRUITMENT & TEST - PD,13800,general
+General Government,HR,Software and Contracted Services,Software and Contracted Services,"SOFTWARE, SUBSCRIPTIONS, MAINT",29060,general
+General Government,HR,"Training, Travel, Tuition","Training, Travel, Tuition",TRAINING & TRAVEL,4230,general
+General Government,HR,"Training, Travel, Tuition","Training, Travel, Tuition",TUITION REIMBURSEMENT,1505,general
+General Government,HR,"Training, Travel, Tuition","Training, Travel, Tuition",VEHICLE USE REIMBURSEMENT,245,general
+General Government,Interdepartmental,Contingency,Other Expenses,CONTINGENCY - DESIGNATED,9000,general
+General Government,Interdepartmental,Contingency,Other Expenses,CONTINGENCY - UNDESIGNATED,25000,general
+General Government,Interdepartmental,Debt Collection,Other Expenses,BAD DEBT EXPENSE,3000,general
+General Government,Interdepartmental,Debt Collection,Other Expenses,DEBT COLLECTION EXPENSE,2000,general
+General Government,Interdepartmental,General Office,General Office,EMPLOYEE RECOG & MEMORIALS,5050,general
+General Government,Interdepartmental,General Office,General Office,LEVY-GPS SYSTEM,2400,capital
+General Government,Interdepartmental,General Office,General Office,OFFICE SUPPLIES - INTERDEPT,12000,general
+General Government,Interdepartmental,General Office,General Office,SAFETY & HEALTH PROGRAMS,100,general
+General Government,Interdepartmental,General Office,General Office,SPECIAL ASSESSMENTS-CITY,30,general
+General Government,Interdepartmental,Salary & Benefits,Salary & Benefits,EMPLOYEE RETIREMENT RESERVE,160000,general
+General Government,Interdepartmental,Salary & Benefits,Salary & Benefits,FICA,12240,general
+General Government,Legal,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",OPERATING MATERIALS & SUPPLIES,600,general
+General Government,Legal,General Office,General Office,PUBLICATIONS & DUES,5375,general
+General Government,Legal,IT Expenses,IT Expenses,IT CAPITAL ISF ALLOCATION,305,general
+General Government,Legal,IT Expenses,IT Expenses,IT OPERATING ISF ALLOCATION,6200,general
+General Government,Legal,Insurance Expenses,Insurance Expenses,INSURANCE ISF ALLOCATION,1520,general
+General Government,Legal,Outside Legal Counsel,Software and Contracted Services,OUTSIDE LEGAL COUNSEL,50000,general
+General Government,Legal,Salary & Benefits,Salary & Benefits,DENTAL INS,1412,general
+General Government,Legal,Salary & Benefits,Salary & Benefits,DISABILITY INS,400,general
+General Government,Legal,Salary & Benefits,Salary & Benefits,FICA,12177,general
+General Government,Legal,Salary & Benefits,Salary & Benefits,HEALTH INS,26624,general
+General Government,Legal,Salary & Benefits,Salary & Benefits,LIFE INS,153,general
+General Government,Legal,Salary & Benefits,Salary & Benefits,SALARIES & WAGES - LEGAL DEPT,159172,general
+General Government,Legal,Salary & Benefits,Salary & Benefits,WRS,11460,general
+General Government,Legal,"Training, Travel, Tuition","Training, Travel, Tuition",TRAINING & TRAVEL,5200,general
+General Government,Legal,"Training, Travel, Tuition","Training, Travel, Tuition",VEHICLE USE REIMBURSEMENT,560,general
+General Government,Mayor & Council,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",OPERATING MATERIALS & SUPPLIES,1650,general
+General Government,Mayor & Council,General Office,General Office,OFFICE SUPPLIES & POSTAGE,500,general
+General Government,Mayor & Council,General Office,General Office,PUBLIC INFORMATION & EDUCATION,1500,general
+General Government,Mayor & Council,General Office,General Office,PUBLICATIONS & DUES,20550,general
+General Government,Mayor & Council,IT Expenses,IT Expenses,IT CAPITAL ISF ALLOCATION,305,general
+General Government,Mayor & Council,IT Expenses,IT Expenses,IT OPERATING ISF ALLOCATION,9720,general
+General Government,Mayor & Council,Insurance Expenses,Insurance Expenses,INSURANCE ISF ALLOCATION,545,general
+General Government,Mayor & Council,Salary & Benefits,Salary & Benefits,FICA,3863,general
+General Government,Mayor & Council,Salary & Benefits,Salary & Benefits,PER DIEMS - YOUTH COMM,1680,general
+General Government,Mayor & Council,Salary & Benefits,Salary & Benefits,SALARIES & WAGES - MAYOR & CC,50500,general
+General Government,Mayor & Council,"Training, Travel, Tuition","Training, Travel, Tuition",TRAINING & TRAVEL,5450,general
+General Government,Mayor & Council,"Training, Travel, Tuition","Training, Travel, Tuition",VEHICLE USE REIMBURSEMENT,110,general
+General Government,Municipal Court,Election Costs,Election Costs,OTHER - DOT SUSPENSION FEES,2000,general
+General Government,Municipal Court,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",OPERATING MATERIALS & SUPPLIES,2600,general
+General Government,Municipal Court,General Office,General Office,OFFICE SUPPLIES & POSTAGE,3730,general
+General Government,Municipal Court,General Office,General Office,PUBLICATIONS & DUES,260,general
+General Government,Municipal Court,IT Expenses,IT Expenses,IT CAPITAL ISF ALLOCATION,915,general
+General Government,Municipal Court,IT Expenses,IT Expenses,IT OPERATING ISF ALLOCATION,18155,general
+General Government,Municipal Court,Insurance Expenses,Insurance Expenses,INSURANCE ISF ALLOCATION,1315,general
+General Government,Municipal Court,Salary & Benefits,Salary & Benefits,DENTAL INS,2118,general
+General Government,Municipal Court,Salary & Benefits,Salary & Benefits,DISABILITY INS,400,general
+General Government,Municipal Court,Salary & Benefits,Salary & Benefits,FICA,11243,general
+General Government,Municipal Court,Salary & Benefits,Salary & Benefits,HEALTH INS,26624,general
+General Government,Municipal Court,Salary & Benefits,Salary & Benefits,LIFE INS,236,general
+General Government,Municipal Court,Salary & Benefits,Salary & Benefits,LONGEVITY BENEFIT,900,general
+General Government,Municipal Court,Salary & Benefits,Salary & Benefits,PT/LTE/SEASONAL WAGES,6139,general
+General Government,Municipal Court,Salary & Benefits,Salary & Benefits,SALARIES & WAGES - MUN COURT,139932,general
+General Government,Municipal Court,Salary & Benefits,Salary & Benefits,WRS,6447,general
+General Government,Municipal Court,Software and Contracted Services,Software and Contracted Services,OTHER CONTRACTUAL SERVICES,3000,general
+General Government,Municipal Court,Software and Contracted Services,Software and Contracted Services,"SOFTWARE, SUBSCRIPTIONS, MAINT",205,general
+General Government,Municipal Court,"Training, Travel, Tuition","Training, Travel, Tuition",TRAINING & TRAVEL,2285,general
+General Government,Municipal Court,"Training, Travel, Tuition","Training, Travel, Tuition",VEHICLE USE REIMBURSEMENT,300,general
+General Government,Sustainability,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",OPERATING MATERIALS & SUPP,900,general
+General Government,Sustainability,General Office,General Office,PUBLIC INFORMATION & EDUCATION,100,general
+General Government,Sustainability,General Office,General Office,"PUBLICATIONS, DUES",475,general
+General Government,Sustainability,IT Expenses,IT Expenses,IT CAPITAL ISF ALLOCATION,150,general
+General Government,Sustainability,IT Expenses,IT Expenses,IT OPERATING ISF ALLOCATION,3255,general
+General Government,Sustainability,Insurance Expenses,Insurance Expenses,INSURANCE ISF ALLOCATION,1438,general
+General Government,Sustainability,Salary & Benefits,Salary & Benefits,DENTAL INS,709,general
+General Government,Sustainability,Salary & Benefits,Salary & Benefits,DISABILITY INS,201,general
+General Government,Sustainability,Salary & Benefits,Salary & Benefits,FICA,3125,general
+General Government,Sustainability,Salary & Benefits,Salary & Benefits,LIFE INS,39,general
+General Government,Sustainability,Salary & Benefits,Salary & Benefits,PER DIEMS - COMMISSIONS & BDS,1200,general
+General Government,Sustainability,Salary & Benefits,Salary & Benefits,SALARIES & WAGES-SUSTAINABILIT,40855,general
+General Government,Sustainability,Salary & Benefits,Salary & Benefits,WRS,2942,general
+General Government,Sustainability,Software and Contracted Services,Software and Contracted Services,PROFESSIONAL SERVICES,3000,general
+General Government,Sustainability,Software and Contracted Services,Software and Contracted Services,"SOFTWARE, SUBSCRIPTIONS, MAINT",250,general
+General Government,Sustainability,"Training, Travel, Tuition","Training, Travel, Tuition",TRAINING & TRAVEL,1000,general
+General Government,Sustainability,"Training, Travel, Tuition","Training, Travel, Tuition",VEHICLE USE REIMBURSEMENT,280,general
+Library,Library,Building Expenses,Building Expenses,LEVY-LIBRARY BUILDING SYS REPL,7214,capital
+Library,Library,Election Costs,Election Costs,OTHER OPERATING EXP,500,library
+Library,Library,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",BLDG CUSTODIAL SUPPLIES,4000,library
+Library,Library,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",EQUIPMENT OPERATING EXPENSE,34000,library
+Library,Library,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",OPERATING MATERIALS & SUPPLIES,24000,library
+Library,Library,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",REPAIR & MAINTENANCE SUPPLIES,2000,library
+Library,Library,Gasoline and Fuel,"Vehicle Expense, Gas, Fuel",GASOLINE/DIESEL FUEL,200,library
+Library,Library,General Office,General Office,LEASE/RENTAL COSTS,13500,library
+Library,Library,General Office,General Office,OFFICE SUPPLIES & POSTAGE,750,library
+Library,Library,General Office,General Office,PUBLIC INFORMATION & EDUCATION,1000,library
+Library,Library,IT Expenses,IT Expenses,IT CAPITAL ISF ALLOCATION,10110,library
+Library,Library,IT Expenses,IT Expenses,IT OPERATING ISF ALLOCATION,100740,library
+Library,Library,Insurance Expenses,Insurance Expenses,INSURANCE ISF ALLOCATION,32840,library
+Library,Library,Program Expenses,Program Expenses,LIBRARY COLLECTION,186500,library
+Library,Library,Salary & Benefits,Salary & Benefits,DENTAL INS,11224,library
+Library,Library,Salary & Benefits,Salary & Benefits,DISABILITY INS,4880,library
+Library,Library,Salary & Benefits,Salary & Benefits,FICA,101077,library
+Library,Library,Salary & Benefits,Salary & Benefits,HEALTH INS,216009,library
+Library,Library,Salary & Benefits,Salary & Benefits,LIBRARY - LONGEVITY,2565,library
+Library,Library,Salary & Benefits,Salary & Benefits,LIFE INS,2343,library
+Library,Library,Salary & Benefits,Salary & Benefits,OVERTIME,1268,library
+Library,Library,Salary & Benefits,Salary & Benefits,PER DIEMS - LIBRARY BOARD,750,library
+Library,Library,Salary & Benefits,Salary & Benefits,PT/LTE/SEASONAL WAGES,81063,library
+Library,Library,Salary & Benefits,Salary & Benefits,SALARIES & WAGES - LIBRARY SVC,1236378,library
+Library,Library,Salary & Benefits,Salary & Benefits,WRS,69201,library
+Library,Library,Software and Contracted Services,Software and Contracted Services,CONTRCT SVC- PERFRMR & PRSNTRS,3000,library
+Library,Library,Software and Contracted Services,Software and Contracted Services,OTHER CONTRACTUAL SERVICES,126615,library
+Library,Library,Software and Contracted Services,Software and Contracted Services,REPAIRS & MAINT BY OTHERS,5000,library
+Library,Library,Software and Contracted Services,Software and Contracted Services,"SOFTWARE, SUBSCRIPTIONS, MAINT",5000,library
+Library,Library,"Training, Travel, Tuition","Training, Travel, Tuition",TRAINING & TRAVEL,4000,library
+Library,Library,"Training, Travel, Tuition","Training, Travel, Tuition",VEHICLE USE REIMBURSEMENT,210,library
+Library,Library,Utilities,Utilities,UTILITIES & TELEPHONE,73800,library
+Library,Library,Vehicle Expense,"Vehicle Expense, Gas, Fuel","VEHICLE EXPENSE (G&O, REPAIRS)",1000,library
+Parks & Recreation,Forestry,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",EQUIPMENT EXPENSE,1150,general
+Parks & Recreation,Forestry,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",OPERATING MATERIALS & SUPPLIES,4700,general
+Parks & Recreation,Forestry,Gasoline and Fuel,"Vehicle Expense, Gas, Fuel",GASOLINE/DIESEL FUEL,500,general
+Parks & Recreation,Forestry,General Office,General Office,OFFICE SUPPLIES & POSTAGE,200,general
+Parks & Recreation,Forestry,General Office,General Office,"PUBLICATIONS, DUES",500,general
+Parks & Recreation,Forestry,IT Expenses,IT Expenses,IT CAPITAL ISF ALLOCATION,610,general
+Parks & Recreation,Forestry,IT Expenses,IT Expenses,IT OPERATING ISF ALLOCATION,13570,general
+Parks & Recreation,Forestry,Insurance Expenses,Insurance Expenses,INSURANCE ISF ALLOCATION,2880,general
+Parks & Recreation,Forestry,Salary & Benefits,Salary & Benefits,DENTAL INS,1412,general
+Parks & Recreation,Forestry,Salary & Benefits,Salary & Benefits,DISABILITY INS,400,general
+Parks & Recreation,Forestry,Salary & Benefits,Salary & Benefits,FICA,7828,general
+Parks & Recreation,Forestry,Salary & Benefits,Salary & Benefits,HEALTH INS,26624,general
+Parks & Recreation,Forestry,Salary & Benefits,Salary & Benefits,LIFE INS,249,general
+Parks & Recreation,Forestry,Salary & Benefits,Salary & Benefits,LTE/SEASONAL WAGES,7985,general
+Parks & Recreation,Forestry,Salary & Benefits,Salary & Benefits,PER DIEMS - TREE ADVISORY COMM,1200,general
+Parks & Recreation,Forestry,Salary & Benefits,Salary & Benefits,SALARIES & WAGES - FORESTRY,94338,general
+Parks & Recreation,Forestry,Salary & Benefits,Salary & Benefits,WRS,6792,general
+Parks & Recreation,Forestry,Software and Contracted Services,Software and Contracted Services,OTHER CONTRACTUAL,44000,general
+Parks & Recreation,Forestry,Software and Contracted Services,Software and Contracted Services,PUBLIC NOTICES/ADS,400,general
+Parks & Recreation,Forestry,"Training, Travel, Tuition","Training, Travel, Tuition",TRAINING & TRAVEL,1500,general
+Parks & Recreation,Forestry,Vehicle Expense,"Vehicle Expense, Gas, Fuel","VEHICLE EXPENSE (G&O, REPAIRS)",500,general
+Parks & Recreation,Parks Department,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",BUILDING REPAIRS & MAINTENANCE,22150,general
+Parks & Recreation,Parks Department,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",EQUIPMENT EXPENSE,12550,general
+Parks & Recreation,Parks Department,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",OPERATING MATERIALS & SUPPLIES,17300,general
+Parks & Recreation,Parks Department,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",REPAIR & MAINT SUPPLIES,41750,general
+Parks & Recreation,Parks Department,Equipment Replacement Funds,"Equipment: Materials, Supplies, Replacement Funds",LEVY-EXISTING LARGE PARK SHELT,53000,capital
+Parks & Recreation,Parks Department,Equipment Replacement Funds,"Equipment: Materials, Supplies, Replacement Funds",LEVY-NEIGHBORHOOD HUB,24034,capital
+Parks & Recreation,Parks Department,Equipment Replacement Funds,"Equipment: Materials, Supplies, Replacement Funds",LEVY-PARK SYSTEM IMPROVEMENTS,63000,capital
+Parks & Recreation,Parks Department,Equipment Replacement Funds,"Equipment: Materials, Supplies, Replacement Funds",LEVY-PARKS EQUIPMENT,269249,capital
+Parks & Recreation,Parks Department,Equipment Replacement Funds,"Equipment: Materials, Supplies, Replacement Funds",LEVY-TENNIS/PICKLEBALL COURTS,44066,capital
+Parks & Recreation,Parks Department,Equipment Replacement Reserve,Other Expenses,EQUIPMENT REPLACEMENT RESERVE,5695,general
+Parks & Recreation,Parks Department,Gasoline and Fuel,"Vehicle Expense, Gas, Fuel",GASOLINE/DIESEL FUEL,34000,general
+Parks & Recreation,Parks Department,General Office,General Office,LEASE/RENTAL COSTS,2500,general
+Parks & Recreation,Parks Department,General Office,General Office,OFFICE SUPPLIES & POSTAGE,550,general
+Parks & Recreation,Parks Department,General Office,General Office,"PUBLICATIONS, DUES",250,general
+Parks & Recreation,Parks Department,Golf Course Maintenance,Golf Course Maintenance,GOLF COURSE MAINTENANCE,56000,general
+Parks & Recreation,Parks Department,IT Expenses,IT Expenses,IT CAPITAL ISF ALLOCATION,3585,general
+Parks & Recreation,Parks Department,IT Expenses,IT Expenses,IT OPERATING ISF ALLOCATION,55030,general
+Parks & Recreation,Parks Department,Insurance Expenses,Insurance Expenses,INSURANCE ISF ALLOCATION,37534,general
+Parks & Recreation,Parks Department,Road/Path Maintenance,Road/Path Maintenance,LEVY-PARKING LOT RESURFACING,75456,capital
+Parks & Recreation,Parks Department,Road/Path Maintenance,Road/Path Maintenance,LEVY-PATH RESURFACE & IMPR,46313,capital
+Parks & Recreation,Parks Department,Salary & Benefits,Salary & Benefits,DENTAL INS,8499,general
+Parks & Recreation,Parks Department,Salary & Benefits,Salary & Benefits,DISABILITY INS,2773,general
+Parks & Recreation,Parks Department,Salary & Benefits,Salary & Benefits,FICA,51502,general
+Parks & Recreation,Parks Department,Salary & Benefits,Salary & Benefits,HEALTH INS,160255,general
+Parks & Recreation,Parks Department,Salary & Benefits,Salary & Benefits,LIFE INS,2317,general
+Parks & Recreation,Parks Department,Salary & Benefits,Salary & Benefits,LONGEVITY,3682,general
+Parks & Recreation,Parks Department,Salary & Benefits,Salary & Benefits,LTE/SEASONAL WAGES,61163,general
+Parks & Recreation,Parks Department,Salary & Benefits,Salary & Benefits,OVERTIME,25602,general
+Parks & Recreation,Parks Department,Salary & Benefits,Salary & Benefits,PARKS ON CALL PAY,10661,general
+Parks & Recreation,Parks Department,Salary & Benefits,Salary & Benefits,PER DIEMS - PARKS COMMISSION,2220,general
+Parks & Recreation,Parks Department,Salary & Benefits,Salary & Benefits,Parks Holiday Premium,6072,general
+Parks & Recreation,Parks Department,Salary & Benefits,Salary & Benefits,SALARIES & WAGES - PARKS DEPT,566054,general
+Parks & Recreation,Parks Department,Salary & Benefits,Salary & Benefits,WRS,43567,general
+Parks & Recreation,Parks Department,Software and Contracted Services,Software and Contracted Services,OTHER CONTRACTUAL,139000,general
+Parks & Recreation,Parks Department,Software and Contracted Services,Software and Contracted Services,PUBLIC NOTICES/ADS,750,general
+Parks & Recreation,Parks Department,"Training, Travel, Tuition","Training, Travel, Tuition",TRAINING & TRAVEL,7875,general
+Parks & Recreation,Parks Department,Uniforms & Protective Gear,"Equipment: Materials, Supplies, Replacement Funds",UNIFORMS & PROTECTIVE GEAR,9300,general
+Parks & Recreation,Parks Department,Utilities,Utilities,UTIL (SHELTERS) & TELEPHONE,62000,general
+Parks & Recreation,Parks Department,Vehicle Expense,"Vehicle Expense, Gas, Fuel","VEHICLE EXPENSE (G&O, REPAIRS)",7000,general
+Parks & Recreation,Recreation & Leisure,Gasoline and Fuel,"Vehicle Expense, Gas, Fuel",GASOLINE/DIESEL FUEL,525,general
+Parks & Recreation,Recreation & Leisure,General Office,General Office,OFFICE SUPPLIES & POSTAGE,275,general
+Parks & Recreation,Recreation & Leisure,General Office,General Office,PUBLIC INFORMATION & EDUCATION,5200,general
+Parks & Recreation,Recreation & Leisure,General Office,General Office,"PUBLICATIONS, DUES",800,general
+Parks & Recreation,Recreation & Leisure,IT Expenses,IT Expenses,IT CAPITAL ISF ALLOCATION,1790,general
+Parks & Recreation,Recreation & Leisure,IT Expenses,IT Expenses,IT OPERATING ISF ALLOCATION,21315,general
+Parks & Recreation,Recreation & Leisure,Insurance Expenses,Insurance Expenses,INSURANCE ISF ALLOCATION,8370,general
+Parks & Recreation,Recreation & Leisure,Program Expenses,Program Expenses,RECREATION PROGRAMS EXPENSE,30000,general
+Parks & Recreation,Recreation & Leisure,Salary & Benefits,Salary & Benefits,DENTAL INS,1923,general
+Parks & Recreation,Recreation & Leisure,Salary & Benefits,Salary & Benefits,DISABILITY INS,753,general
+Parks & Recreation,Recreation & Leisure,Salary & Benefits,Salary & Benefits,FICA,16910,general
+Parks & Recreation,Recreation & Leisure,Salary & Benefits,Salary & Benefits,HEALTH INS,37457,general
+Parks & Recreation,Recreation & Leisure,Salary & Benefits,Salary & Benefits,LIFE INS,296,general
+Parks & Recreation,Recreation & Leisure,Salary & Benefits,Salary & Benefits,LONGEVITY,765,general
+Parks & Recreation,Recreation & Leisure,Salary & Benefits,Salary & Benefits,OVERTIME,2466,general
+Parks & Recreation,Recreation & Leisure,Salary & Benefits,Salary & Benefits,PT/LTE/SEASONAL WAGES,65809,general
+Parks & Recreation,Recreation & Leisure,Salary & Benefits,Salary & Benefits,SALARIES & WAGES - RECREATION,152002,general
+Parks & Recreation,Recreation & Leisure,Salary & Benefits,Salary & Benefits,WRS,11177,general
+Parks & Recreation,Recreation & Leisure,Software and Contracted Services,Software and Contracted Services,OTHER CONTRACTUAL SERVICES,70000,general
+Parks & Recreation,Recreation & Leisure,Software and Contracted Services,Software and Contracted Services,"SOFTWARE, SUBSCRIPTIONS, MAINT",5500,general
+Parks & Recreation,Recreation & Leisure,"Training, Travel, Tuition","Training, Travel, Tuition",TRAINING & TRAVEL,1400,general
+Parks & Recreation,Recreation & Leisure,Vehicle Expense,"Vehicle Expense, Gas, Fuel",VEHICLE OPERATING EXPENSE,500,general
+Planning,Economic Development,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",OPERATING MATERIALS & SUPPLIES,1250,general
+Planning,Economic Development,General Office,General Office,COMMUNICATIONS EXPENSE,410,general
+Planning,Economic Development,General Office,General Office,OFFICE SUPPLIES & POSTAGE,1675,general
+Planning,Economic Development,General Office,General Office,"PUBLICATIONS, DUES",2095,general
+Planning,Economic Development,IT Expenses,IT Expenses,IT CAPITAL ISF ALLOCATION,915,general
+Planning,Economic Development,IT Expenses,IT Expenses,IT OPERATING ISF ALLOCATION,25410,general
+Planning,Economic Development,Insurance Expenses,Insurance Expenses,INSURANCE ISF ALLOCATION,9735,general
+Planning,Economic Development,Salary & Benefits,Salary & Benefits,DENTAL INS,3336,general
+Planning,Economic Development,Salary & Benefits,Salary & Benefits,DISABILITY INS,1200,general
+Planning,Economic Development,Salary & Benefits,Salary & Benefits,EDC Holiday Premium,209,general
+Planning,Economic Development,Salary & Benefits,Salary & Benefits,FICA,26342,general
+Planning,Economic Development,Salary & Benefits,Salary & Benefits,HEALTH INS,64081,general
+Planning,Economic Development,Salary & Benefits,Salary & Benefits,LIFE INS,1733,general
+Planning,Economic Development,Salary & Benefits,Salary & Benefits,LONGEVITY,2610,general
+Planning,Economic Development,Salary & Benefits,Salary & Benefits,PER DIEMS - ECON DEV COMM,1080,general
+Planning,Economic Development,Salary & Benefits,Salary & Benefits,SALARIES & WAGES - EDC,341520,general
+Planning,Economic Development,Salary & Benefits,Salary & Benefits,WRS,24792,general
+Planning,Economic Development,Software and Contracted Services,Software and Contracted Services,"SOFTWARE, SUBSCRIPTIONS, MAINT",1440,general
+Planning,Economic Development,"Training, Travel, Tuition","Training, Travel, Tuition",TRAINING & TRAVEL,3175,general
+Planning,Economic Development,"Training, Travel, Tuition","Training, Travel, Tuition",VEHICLE USE REIMBURSEMENT,840,general
+Planning,Zoning & Planning,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",OPERATING MATERIALS & SUPPLIES,500,general
+Planning,Zoning & Planning,General Office,General Office,OFFICE SUPPLIES & POSTAGE,1600,general
+Planning,Zoning & Planning,General Office,General Office,PUBLIC INFORMATION & EDUCATION,1000,general
+Planning,Zoning & Planning,General Office,General Office,"PUBLICATIONS, DUES",3600,general
+Planning,Zoning & Planning,IT Expenses,IT Expenses,IT CAPITAL ISF ALLOCATION,1220,general
+Planning,Zoning & Planning,IT Expenses,IT Expenses,IT OPERATING ISF ALLOCATION,32255,general
+Planning,Zoning & Planning,Insurance Expenses,Insurance Expenses,INSURANCE ISF ALLOCATION,2920,general
+Planning,Zoning & Planning,Salary & Benefits,Salary & Benefits,DENTAL INS,3336,general
+Planning,Zoning & Planning,Salary & Benefits,Salary & Benefits,DISABILITY INS,1129,general
+Planning,Zoning & Planning,Salary & Benefits,Salary & Benefits,FICA,25337,general
+Planning,Zoning & Planning,Salary & Benefits,Salary & Benefits,HEALTH INS,64081,general
+Planning,Zoning & Planning,Salary & Benefits,Salary & Benefits,LIFE INS,752,general
+Planning,Zoning & Planning,Salary & Benefits,Salary & Benefits,OVERTIME,7270,general
+Planning,Zoning & Planning,Salary & Benefits,Salary & Benefits,PER DIEMS - COMMISSIONS & BDS,4090,general
+Planning,Zoning & Planning,Salary & Benefits,Salary & Benefits,PT/LTE/SEASONAL WAGES,12698,general
+Planning,Zoning & Planning,Salary & Benefits,Salary & Benefits,SALARIES & WAGES - PLANNING,311240,general
+Planning,Zoning & Planning,Salary & Benefits,Salary & Benefits,WRS,22933,general
+Planning,Zoning & Planning,Software and Contracted Services,Software and Contracted Services,PROFESSIONAL SERVICES,5000,general
+Planning,Zoning & Planning,Software and Contracted Services,Software and Contracted Services,PUBLIC NOTICES/ADS,6000,general
+Planning,Zoning & Planning,"Training, Travel, Tuition","Training, Travel, Tuition",TRAINING & TRAVEL,8400,general
+Planning,Zoning & Planning,"Training, Travel, Tuition","Training, Travel, Tuition",VEHICLE USE REIMBURSEMENT,700,general
+Police,Police Department,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",BLDG CUSTODIAL SUPPLIES,8000,general
+Police,Police Department,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",EQUIPMENT EXPENSE,15000,general
+Police,Police Department,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",EQUIPMENT EXPENSE,13500,general
+Police,Police Department,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",INVESTIGATIVE SUPPLIES,22700,general
+Police,Police Department,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",K-9 UNIT,1800,general
+Police,Police Department,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",OPERATING MATERIALS & SUPPLIES,29750,general
+Police,Police Department,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",REPAIR & MAINT SUPPLIES,500,general
+Police,Police Department,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",REPAIR & MAINT SUPPLIES,2500,general
+Police,Police Department,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",REPAIR & MAINT SUPPLIES,1000,general
+Police,Police Department,Equipment Replacement Reserve,Other Expenses,EQUIPMENT REPLACEMENT RESERVE,31588,general
+Police,Police Department,Gasoline and Fuel,"Vehicle Expense, Gas, Fuel",GASOLINE/DIESEL FUEL,133000,general
+Police,Police Department,General Office,General Office,COMMUNICATIONS EXPENSE,3000,general
+Police,Police Department,General Office,General Office,OFFICE SUPPLIES & POSTAGE,13000,general
+Police,Police Department,General Office,General Office,PUBLIC INFORMATION & EDUCATION,12500,general
+Police,Police Department,General Office,General Office,"PUBLICATIONS, DUES",2500,general
+Police,Police Department,IT Expenses,IT Expenses,IT CAPITAL ISF ALLOCATION,29550,general
+Police,Police Department,IT Expenses,IT Expenses,IT OPERATING ISF ALLOCATION,3880,general
+Police,Police Department,IT Expenses,IT Expenses,IT OPERATING ISF ALLOCATION,454030,general
+Police,Police Department,Insurance Expenses,Insurance Expenses,INSURANCE ISF ALLOCATION,33657,general
+Police,Police Department,Insurance Expenses,Insurance Expenses,INSURANCE ISF ALLOCATION,201385,general
+Police,Police Department,MPSIS,Police/Fire Systems,MPSIS ALLOCATION,184795,general
+Police,Police Department,Salary & Benefits,Salary & Benefits,DENTAL INS,1412,general
+Police,Police Department,Salary & Benefits,Salary & Benefits,DENTAL INS,73648,general
+Police,Police Department,Salary & Benefits,Salary & Benefits,DISABILITY INS,329,general
+Police,Police Department,Salary & Benefits,Salary & Benefits,DISABILITY INS,25325,general
+Police,Police Department,Salary & Benefits,Salary & Benefits,FICA,4056,general
+Police,Police Department,Salary & Benefits,Salary & Benefits,FICA,502227,general
+Police,Police Department,Salary & Benefits,Salary & Benefits,FTO DIFFERENTIAL,2000,general
+Police,Police Department,Salary & Benefits,Salary & Benefits,HEALTH INS,26624,general
+Police,Police Department,Salary & Benefits,Salary & Benefits,HEALTH INS,1355609,general
+Police,Police Department,Salary & Benefits,Salary & Benefits,HOLIDAY PREMIUM,34988,general
+Police,Police Department,Salary & Benefits,Salary & Benefits,LIFE INS,76,general
+Police,Police Department,Salary & Benefits,Salary & Benefits,LIFE INS,8866,general
+Police,Police Department,Salary & Benefits,Salary & Benefits,LONGEVITY,11385,general
+Police,Police Department,Salary & Benefits,Salary & Benefits,ON CALL PAY,6070,general
+Police,Police Department,Salary & Benefits,Salary & Benefits,OVERTIME,3566,general
+Police,Police Department,Salary & Benefits,Salary & Benefits,OVERTIME,462687,general
+Police,Police Department,Salary & Benefits,Salary & Benefits,PT/LTE/SEASONAL WAGES,9924,general
+Police,Police Department,Salary & Benefits,Salary & Benefits,SALARIES & WAGES - POLICE,5997501,general
+Police,Police Department,Salary & Benefits,Salary & Benefits,SALARIES & WAGES-PD FACILITY,49454,general
+Police,Police Department,Salary & Benefits,Salary & Benefits,TAXABLE CLOTH ALLOW/STIPEND,40500,general
+Police,Police Department,Salary & Benefits,Salary & Benefits,WRS,3817,general
+Police,Police Department,Salary & Benefits,Salary & Benefits,WRS,910030,general
+Police,Police Department,Software and Contracted Services,Software and Contracted Services,OTHER CONTRACTUAL SERVICES,750,general
+Police,Police Department,Software and Contracted Services,Software and Contracted Services,OTHER CONTRACTUAL/CROSS GUARDS,5000,general
+Police,Police Department,Software and Contracted Services,Software and Contracted Services,PROFESSIONAL SERVICES,40800,general
+Police,Police Department,Software and Contracted Services,Software and Contracted Services,REPAIRS & MAINT - BY OTHERS,7000,general
+Police,Police Department,Software and Contracted Services,Software and Contracted Services,REPAIRS & MAINT - BY OTHERS,39200,general
+Police,Police Department,Software and Contracted Services,Software and Contracted Services,REPAIRS & MAINT - BY OTHERS,4300,general
+Police,Police Department,Software and Contracted Services,Software and Contracted Services,"SOFTWARE, SUBSCRIPTIONS, MAINT",30050,general
+Police,Police Department,"Training, Travel, Tuition","Training, Travel, Tuition",TRAINING & TRAVEL,58500,general
+Police,Police Department,"Training, Travel, Tuition","Training, Travel, Tuition",TUITION REIMBURSEMENT,1360,general
+Police,Police Department,"Training, Travel, Tuition","Training, Travel, Tuition",YMCA MEMBERSHIP,8475,general
+Police,Police Department,Uniforms & Protective Gear,"Equipment: Materials, Supplies, Replacement Funds",PROTECTIVE GEAR,26925,general
+Police,Police Department,Uniforms & Protective Gear,"Equipment: Materials, Supplies, Replacement Funds",UNIFORMS & PROTECTIVE GEAR,400,general
+Police,Police Department,Uniforms & Protective Gear,"Equipment: Materials, Supplies, Replacement Funds",UNIFORMS & PROTECTIVE GEAR,900,general
+Police,Police Department,Utilities,Utilities,UTILITIES,3200,general
+Police,Police Department,Utilities,Utilities,UTILITIES,105000,general
+Police,Police Department,Vehicle Expense,"Vehicle Expense, Gas, Fuel","VEHICLE EXPENSE (G&O, REPAIRS)",55000,general
+Public Works,Public Works,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",OPERATING MATERIALS & SUPPLIES,1500,general
+Public Works,Public Works,Equipment Materials & Supplies,"Equipment: Materials, Supplies, Replacement Funds",REPAIR & MAINT SUPPLIES,42200,general
+Public Works,Public Works,Equipment Replacement Funds,"Equipment: Materials, Supplies, Replacement Funds",LEVY-HIGHWAY EQUIPMENT,303312,capital
+Public Works,Public Works,Gasoline and Fuel,"Vehicle Expense, Gas, Fuel",GASOLINE/DIESEL FUEL,71300,general
+Public Works,Public Works,General Office,General Office,COMMUNICATIONS EXPENSE,1500,general
+Public Works,Public Works,General Office,General Office,OFFICE SUPPLIES & POSTAGE,2100,general
+Public Works,Public Works,General Office,General Office,"PUBLICATIONS, DUES",10510,general
+Public Works,Public Works,IT Expenses,IT Expenses,IT CAPITAL ISF ALLOCATION,5190,general
+Public Works,Public Works,IT Expenses,IT Expenses,IT OPERATING ISF ALLOCATION,149875,general
+Public Works,Public Works,Insurance Expenses,Insurance Expenses,INSURANCE ISF ALLOCATION,78964,general
+Public Works,Public Works,Road/Path Maintenance (incl. Debt Payments),Road/Path Maintenance,LEVY-MAINTENANCE OF ARTERIALS,72905,capital
+Public Works,Public Works,Road/Path Maintenance (incl. Debt Payments),Road/Path Maintenance,LEVY-SIDEWALK & PATH IMPROV,34735,capital
+Public Works,Public Works,Road/Path Maintenance (incl. Debt Payments),Road/Path Maintenance,LEVY-STREET RESURFACE PRGM,193831,capital
+Public Works,Public Works,Road/Path Maintenance (incl. Debt Payments),Road/Path Maintenance,ROAD MAINTENANCE,403650,general
+Public Works,Public Works,Road/Path Maintenance (incl. Debt Payments),Road/Path Maintenance,ROADWAY SUPPLIES,179630,general
+Public Works,Public Works,Salary & Benefits,Salary & Benefits,DENTAL INS,14582,general
+Public Works,Public Works,Salary & Benefits,Salary & Benefits,DISABILITY INS,5352,general
+Public Works,Public Works,Salary & Benefits,Salary & Benefits,FICA,89356,general
+Public Works,Public Works,Salary & Benefits,Salary & Benefits,HEALTH INS,268479,general
+Public Works,Public Works,Salary & Benefits,Salary & Benefits,LIFE INS,3064,general
+Public Works,Public Works,Salary & Benefits,Salary & Benefits,LONGEVITY,4195,general
+Public Works,Public Works,Salary & Benefits,Salary & Benefits,OVERTIME,56766,general
+Public Works,Public Works,Salary & Benefits,Salary & Benefits,PER DIEMS - BD OF PUBLIC WKS,3050,general
+Public Works,Public Works,Salary & Benefits,Salary & Benefits,PT/LTE/SEASONAL WAGES,13468,general
+Public Works,Public Works,Salary & Benefits,Salary & Benefits,PW Holiday Premium,5838,general
+Public Works,Public Works,Salary & Benefits,Salary & Benefits,PW ON CALL PAY,10661,general
+Public Works,Public Works,Salary & Benefits,Salary & Benefits,SALARIES & WAGES - PUBLIC WKS,1077117,general
+Public Works,Public Works,Salary & Benefits,Salary & Benefits,WRS,83049,general
+Public Works,Public Works,Software and Contracted Services,Software and Contracted Services,PROFESSIONAL SERVICES,10880,general
+Public Works,Public Works,Software and Contracted Services,Software and Contracted Services,PUBLIC NOTICES/ADS,1100,general
+Public Works,Public Works,Software and Contracted Services,Software and Contracted Services,"SOFTWARE, SUBSCRIPTIONS, MAINT",32350,general
+Public Works,Public Works,Street Light/Traffic Signal Service,Street Light/Traffic Signal Service,POLES & LIGHTS REPLACE STOCK,22500,general
+Public Works,Public Works,Street Light/Traffic Signal Service,Street Light/Traffic Signal Service,STREET LIGHT MAINTENANCE,30000,general
+Public Works,Public Works,Street Light/Traffic Signal Service,Street Light/Traffic Signal Service,STREET LIGHT SERVICE - MG&E,260000,general
+Public Works,Public Works,Street Light/Traffic Signal Service,Street Light/Traffic Signal Service,TRAFFIC SIGNAL MAINTENANCE,29000,general
+Public Works,Public Works,"Training, Travel, Tuition","Training, Travel, Tuition",TRAINING & TRAVEL,17710,general
+Public Works,Public Works,"Training, Travel, Tuition","Training, Travel, Tuition",VEHICLE USE REIMBURSEMENT,500,general
+Public Works,Public Works,Uniforms & Protective Gear,"Equipment: Materials, Supplies, Replacement Funds",UNIFORMS & PROTECTIVE GEAR,19570,general
+Public Works,Public Works,Utilities,Utilities,UTILITIES,250,general
+Public Works,Public Works,Vehicle Expense,"Vehicle Expense, Gas, Fuel","VEHICLE EXPENSE (G&O, REPAIRS)",54500,general
+Transit,Transit,Metro Transit Services,Metro Transit Services,METRO TRANSIT SERVICES,2456497,transit
+,Police Department,Building Expenses,Building Expenses,LEVY-POLICE EVIDENCE FACILITY,6012,capital
+,Police Department,Building Expenses,Building Expenses,LEVY-POLICE FACILITY,200000,capital
+,Police Department,Equipment Replacement Funds,"Equipment: Materials, Supplies, Replacement Funds",LEVY-DISPATCH CONSOLES,50393,capital
+,Police Department,Equipment Replacement Funds,"Equipment: Materials, Supplies, Replacement Funds",LEVY-ELECTRONIC CONTROL DEVICE,16345,capital
+,Police Department,Equipment Replacement Funds,"Equipment: Materials, Supplies, Replacement Funds",LEVY-PD EQUIPMENT,17437,capital
+,Police Department,Equipment Replacement Funds,"Equipment: Materials, Supplies, Replacement Funds",LEVY-POLICE BODY CAMERAS,30030,capital
+,Police Department,Vehicle Expense,"Vehicle Expense, Gas, Fuel",LEVY-PD FLEET VEHICLES,21630,capital
+Buildings & Grounds,City Buildings,Debt Payments,Debt Payments,City Buildings,74386.08,debt
+Fire/EMS,Fire Department,"Debt Payments (Stations, Engines, Equipment)",Debt Payments,"Fire Stations, Engines & Equipment",772976.92,debt
+Fire/EMS,Other Public Safety,Debt Payments (EMS Fleet),Debt Payments,EMS Fleet,6865.24,debt
+Library,Library,Debt Payments,Debt Payments,Library,525000.00,debt
+Parks & Recreation,Parks Department,Debt Payments,Debt Payments,Parks,48750.00,debt
+Police,Police Department,Debt Payments (Police Facility),Debt Payments,Police Facility,1477689.30,debt
+Public Works,Public Works,"Debt Payments (Buildings, Equipment)",Debt Payments,Public Works Buildings & Equipment,60915.61,debt
+Public Works,Public Works,Debt Payments (Major Road Reconstruction),Debt Payments,Major Road Reconstruction,616112.05,debt
+Public Works,Public Works,Road/Path Maintenance (incl. Debt Payments),Debt Payments,Road/Path Maintenance,197304.80,debt
+Other Debt Payments (Final Year 2016 Bonds),Other Debt Payments (Final Year 2016 Bonds),Final Year 2016 Bonds,Debt Payments,Final Year of 2016 Bonds,400000.00,debt
